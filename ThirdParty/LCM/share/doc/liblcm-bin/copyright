@@ -1,0 +1,52 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: lcm
+Upstream-Contact: lcm-users@googlegroups.com
+Source: git://anonscm.debian.org/collab-maint/lcm.git
+
+Files: *
+Copyright: 2007-2016 LCM developers
+License: LGPL-2.1+
+
+Files: lcm-lite/lcmlite_ios.*
+Copyright: 2010 Edwin Olson
+License: LGPL-2.1+
+
+Files: m4/ax_lua.m4
+Copyright: 2013 Tim Perkins <tprk77@gmail.com>, Reuben Thomas <rrt@sc3d.org>
+License: GPL-3+
+
+Files: m4/ax_version_compare.m4
+Copyright: 2008 Tim Toolan <toolan@ele.uri.edu>
+License: AXVC
+
+Files: m4/lib_socket_nsl.m4
+Copyright: 2005 Russ Allbery <rra@stanford.edu>, Stepan Kasal <kasal@ucw.cz>, Warren Young <warren@etr-usa.com>
+License: LSN
+
+
+License: LGPL-2.1+
+ This program is free software; you can redistribute it and/or modify it under
+ the terms of the GNU Lesser General Public License as published by the Free
+ Software Foundation; either version 2.1, or (at your option) any later version.
+ .
+ On Debian GNU/Linux systems, the complete text of the Lesser General Public
+ License can be found in `/usr/share/common-licenses/LGPL-2.1'.
+
+License: GPL-3+
+ This program is free software; you can redistribute it and/or modify it under
+ the terms of the GNU General Public License as published by the Free Software
+ Foundation; either version 3, or (at your option) any later version.
+ .
+ On Debian GNU/Linux systems, the complete text of the General Public License
+ can be found in `/usr/share/common-licenses/GPL-3'.
+
+License: AXVC
+ Copying and distribution of this file, with or without modification, are
+ permitted in any medium without royalty provided the copyright notice
+ and this notice are preserved. This file is offered as-is, without any
+ warranty.
+
+License: LSN
+ Copying and distribution of this file, with or without
+ modification, are permitted in any medium without royalty provided
+ the copyright notice and this notice are preserved.
