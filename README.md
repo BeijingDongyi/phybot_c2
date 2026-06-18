@@ -2,6 +2,13 @@
 
 ## 快速使用
 
+如果这个包是从 GitHub 克隆下来的，请先拉取 Git LFS 文件，否则 `prebuilt/*.a`、`lib/*.so`、模型文件会只是 100 多字节的指针文件，编译时会出现 `file format not recognized`：
+
+```bash
+git lfs install
+git lfs pull
+```
+
 编译：
 
 ```bash
