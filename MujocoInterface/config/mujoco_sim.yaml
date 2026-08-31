@@ -30,6 +30,8 @@ joint_names:
   - right_shoulder_yaw
   - right_elbow_pitch
 
+  - neck_yaw
+  - neck_pitch
 
 
 baseName: base_link

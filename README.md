@@ -7,7 +7,7 @@ Phybot C2 客户交付软件包。
 - 软件包名称：PHYBOT_C2_SDK_1.1
 - 运行环境：all
 - 手柄类型：Model_airplane
-- 保留源码包：无
+- 保留源码包：RL_deploy_cpg
 - 架构：Linux x86_64
 - 编译类型：Release
 - 交付内容：可执行二进制、运行时动态库、配置文件、模型文件和数据文件

@@ -5,6 +5,8 @@
 # policy_path: ../RL_deploy_cpg/model/0401_1519/cpg_policy.pt
 policy_path: ../RL_deploy_cpg/model/0513_1650_7000/cpg_policy.pt
 
+
+
 decimation: 10
 num_proprio: 73
 

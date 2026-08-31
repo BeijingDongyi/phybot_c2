@@ -1,7 +1,0 @@
-# Active joystick backend.
-# Supported: airplane (aliases: plane), xbox
-#
-# Real robot (run_mini): typically airplane
-# Sim (mocap_test): typically xbox
-joystick_backend: airplane
-# joystick_backend: xbox
