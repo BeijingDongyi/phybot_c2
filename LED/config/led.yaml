@@ -1,0 +1,42 @@
+dev: "/dev/ttyled"
+baud_rate: 115200
+commands:
+  - name: PowerOn
+    value: 0x0001
+    text: "整机上电"
+  - name: JointEnable
+    value: 0x0002
+    text: "关节使能"
+  - name: Startup
+    value: 0x0003
+    text: "智能体启动"
+  - name: StartupSuccess
+    value: 0x0004
+    text: "智能体启动成功"
+  - name: Homing
+    value: 0x0005
+    text: "标零"
+  - name: HomingSuccess
+    value: 0x0006
+    text: "标零成功"
+  - name: NetworkConnect
+    value: 0x0007
+    text: "网络连接"
+  - name: ConnectSuccess
+    value: 0x0008
+    text: "网络连接成功"
+  - name: Fault
+    value: 0x0009
+    text: "故障"
+  - name: HighBattery
+    value: 0x000a
+    text: "高电量运行"
+  - name: NormalRun
+    value: 0x000b
+    text: "正常运行"
+  - name: LowBattery
+    value: 0x000c
+    text: "低电量运行"
+  - name: CustomMode
+    value: 0x000d
+    text: "自定义模式"

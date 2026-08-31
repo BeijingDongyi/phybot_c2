@@ -1,0 +1,60 @@
+policy_path: ../RL_deploy_lower_cpg/model/cpg_policy.pt
+
+decimation: 10
+num_proprio: 60
+
+clip_obs: 50.0
+clip_actions_lower: -50.0
+clip_actions_upper: 50.0
+
+rl_p: [100.0, 100.0, 100.0, 100.0, 50.0, 50.0,
+        100.0, 100.0, 100.0, 100.0, 50.0, 50.0,
+        100.0,
+       100.0, 100.0, 10.0, 100.0,
+       100.0, 100.0, 10.0, 100.0,
+        10,10]
+
+rl_d: [10.0, 10.0, 10.0, 10.0, 5.0, 5.0,
+        10.0, 10.0, 10.0, 10.0, 5.0, 5.0,
+        10.0,
+        10.0, 10.0, 10.0, 10.0,
+        10.0, 10.0, 10.0, 10.0,
+        10,10]
+
+action_scale: [0.2, 0.2, 0.2, 0.2, 0.2, 0.2,
+       0.2, 0.2, 0.2, 0.2, 0.2, 0.2,
+       0.2]
+
+num_of_dofs: 13
+history_len: 20
+num_of_heights: 625
+
+lin_vel_scale: 1.0
+ang_vel_scale: 0.25
+dof_pos_scale: 1.0
+dof_vel_scale: 0.05
+z_height_scale: 1.0
+
+torque_limits: [200.0, 80.0, 58.0, 80.0, 58.0, 9.0,
+                200.0, 80.0, 58.0, 80.0, 58.0, 9.0,
+                58.0]
+
+default_dof_pos: [-0.242, 0.029, 0.007, 0.490, -0.295, 0.0,
+                  -0.242, -0.029, -0.007, 0.490, -0.295, 0.0,
+                   0.0]
+
+useless_joint_id: []
+
+# use_action_bin: 1 表示启用 bin 播放功能
+# action_bin_map: model编号 -> bin文件路径的映射表
+# model含义: 3=挥手, 5=出拳, 6=踢腿, 9=太极, 10=功夫
+# 没有对应条目的model(1,2,4,7,8)将关闭bin播放，上肢走手动控制
+use_action_bin: 1
+action_bin_map:
+  14: ../RL_deploy_lower_cpg/export_actions_bin/teleop_test_episode015.bin
+  17: ../RL_deploy_lower_cpg/export_actions_bin/teleop_test_episode018.bin
+  15: ../RL_deploy_lower_cpg/export_actions_bin/teleop_test_episode016.bin
+  18: ../RL_deploy_lower_cpg/export_actions_bin/teleop_test_episode020.bin
+  16: ../RL_deploy_lower_cpg/export_actions_bin/teleop_test_episode017.bin
+  12: ../RL_deploy_lower_cpg/export_actions_bin/teleop_test_episode009.bin
+  11: ../RL_deploy_lower_cpg/export_actions_bin/teleop_test_episode006.bin
