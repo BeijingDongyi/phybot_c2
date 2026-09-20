@@ -1,0 +1,186 @@
+/*
+This is part of OpenLoong Dynamics Control, an open project for the control of biped robot,
+Copyright (C) 2024 Humanoid Robot (Shanghai) Co., Ltd, under Apache 2.0.
+Feel free to use in any purpose, and cite OpenLoong-Dynamics-Control in any style, to contribute to the advancement of the community.
+ <https://atomgit.com/openloong/openloong-dyn-control.git>
+ <web@openloong.org.cn>
+*/
+#include <mujoco/mujoco.h>
+#include <GLFW/glfw3.h>
+#include <cstdio>
+#include <iostream>
+#include "GLFW_callbacks.h"
+#include "glfw_adapter.h"
+#include "simulate.h"
+#include "array_safety.h"
+#include"DataPackage/include/DataPackage.h"
+// #include "GLFW_callbacks.h"
+#include "mujoco_interface.h"
+#include <spdlog/spdlog.h>
+#include <spdlog/sinks/basic_file_sink.h> // 用于文件输出
+#include "WholeBodyControl/include/WBCSolver.h"
+#include "GaitPlanner/include/GaitPlanner.h"
+#include "StateEstimator/include/StateEstimator.h"
+#include "StateMachine/include/statemachinemanager.h"
+#include "DataLogger/include/DataLogger.h"
+#include "Joystick/include/joystick_int.h"
+
+
+std::string file_path = "../MujocoInterface/config/mujoco_sim.yaml";
+YAML::Node config = YAML::LoadFile(file_path);
+std::string env_path = config["env_path"].as<std::string>();
+
+// MuJoCo load and compile model
+char error[1000] = "Could not load binary model";
+mjModel* mj_model = mj_loadXML(env_path.c_str(), 0, error, 1000);
+mjData* mj_data = mj_makeData(mj_model);
+
+//************************
+// main function
+int main(int argc, const char** argv)
+{
+    // ini classes
+    UIctr uiController(mj_model,mj_data);   // UI control for Mujoco
+
+
+    // variables ini
+    double stand_legLength = 1.01; //-0.95; // desired baselink height
+    double foot_height =0.07; // distance between the foot ankel joint and the bottom
+    double  xv_des = 0.7;  // desired velocity in x direction
+
+
+    DataPackage package;
+    package.init();
+
+    StateEstimator state_estimator(package);
+
+    Joystick joystick;
+    joystick.init();
+
+    DataLogger Logger;
+    // spdlog::info("DataLogger");
+
+    StateMachineManager manager;
+    // spdlog::info("StateMachineManager");
+    manager.init(package);
+    // spdlog::info("manager.init");
+    // 设置日志级别
+    spdlog::set_level(spdlog::level::info); // 只记录INFO级别及以上的日志
+    // WBC_Solver::WeightedWBCSolver wbc(package);
+    spdlog::info("wbc load success!");
+
+    MujocoInterface MujocoInterface(package); // data interface for Mujoco
+    spdlog::info("interface load success!");
+
+
+    spdlog::info("model load success!");
+
+
+
+    /// ----------------- sim Loop ---------------
+    double simEndTime=200;
+    mjtNum simstart = mj_data->time;
+    double simTime = mj_data->time;
+    double startSteppingTime=3;
+    double startWalkingTime=5;
+
+    // init UI: GLFW
+    uiController.iniGLFW();
+    uiController.enableTracking(); // enable viewpoint tracking of the body 1 of the robot
+    uiController.createWindow("Demo",false);
+
+    while( !glfwWindowShouldClose(uiController.window))
+    {
+        // advance interactive simulation for 1/60 sec
+        //  Assuming MuJoCo can simulate faster than real-time, which it usually can,
+        //  this loop will finish on time for the next frame to be rendered at 60 fps.
+        //  Otherwise add a cpu timer and exit this loop when it is time to render.
+        simstart=mj_data->time;
+        while( mj_data->time - simstart < 1.0/50.0 )
+        {
+
+            auto record_start_time = std::chrono::steady_clock::now();
+
+            mj_step(mj_model, mj_data);
+
+            simTime=mj_data->time;
+
+            MujocoInterface.GetDataFromSim(mj_model, mj_data);
+            MujocoInterface.SetDataToPackage(package);
+
+            joystick.GetDataFromPackage(package);
+            joystick.run();
+            joystick.SetDataToPackage(package);
+
+            state_estimator.GetDataFromPackage(package);
+
+            // std::cout << "code come to state_estimator.Step " << std::endl;
+
+            state_estimator.Step(package);
+            state_estimator.SetDataToPackage(package);
+
+            // std::cout << "code come to state_estimator.SetDataToPackage " << std::endl;
+
+            manager.GetDataFromPackage(package);
+
+            manager.run(package);
+
+            manager.SetDataToPackage(package); 
+
+            // std::cout<< "all_calculate time:"<<elapsed_record.count()<<std::endl;
+            MujocoInterface.SetTorque(package,mj_data);
+
+
+
+
+
+            auto record_now_time = std::chrono::steady_clock::now();
+            std::chrono::duration<double> elapsed_record = record_now_time - record_start_time;
+            std::cout<< "all_calculate time:"<<elapsed_record.count()<<std::endl;
+            std::cout<< "mj_data->time:"<<mj_data->time - simstart<<std::endl;
+            // usleep(2000);
+        }
+
+        if (mj_data->time>=simEndTime)
+        {
+            break;
+        }
+
+            MujocoInterface.GetDataFromSim(mj_model, mj_data);
+            MujocoInterface.SetDataToPackage(package);
+
+            joystick.GetDataFromPackage(package);
+            joystick.run();
+            joystick.SetDataToPackage(package);
+
+            state_estimator.GetDataFromPackage(package);
+
+            // std::cout << "code come to state_estimator.Step " << std::endl;
+
+            state_estimator.Step(package);
+            state_estimator.SetDataToPackage(package);
+
+            // std::cout << "code come to state_estimator.SetDataToPackage " << std::endl;
+
+            manager.GetDataFromPackage(package);
+
+            manager.run(package);
+
+            manager.SetDataToPackage(package); 
+
+            // std::cout<< "all_calculate time:"<<elapsed_record.count()<<std::endl;
+            MujocoInterface.SetTorque(package,mj_data);
+
+            
+        uiController.updateScene();
+    }
+
+//    // free visualization storage
+    uiController.Close();
+
+    // free MuJoCo model and data, deactivate
+    mj_deleteData(mj_data);
+    mj_deleteModel(mj_model);
+
+    return 0;
+}

@@ -1,1 +1,7 @@
 lib/
+
+# GitHub rejects individual files larger than 100 MiB. Keep these SDK
+# dependencies in the local/customer package without adding them to Git.
+ThirdParty/libtorch/lib/libdnnl.a
+ThirdParty/libtorch/lib/libtorch_cpu.so
+ThirdParty/pinocchio/lib/libpinocchio_default.so.3.3.0

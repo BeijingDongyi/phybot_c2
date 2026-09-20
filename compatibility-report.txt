@@ -1,0 +1,2 @@
+Ubuntu 20.04 x86_64 ELF ABI check passed (54 libraries).
+This checks symbol-version requirements; final linking, system dependencies and hardware still require target testing.

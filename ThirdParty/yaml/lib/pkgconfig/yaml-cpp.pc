@@ -1,0 +1,11 @@
+prefix=/home/zrm/my_yaml_cpp_install
+exec_prefix=${prefix}
+includedir=/home/zrm/my_yaml_cpp_install/include
+libdir=/home/zrm/my_yaml_cpp_install/lib
+
+Name: Yaml-cpp
+Description: A YAML parser and emitter for C++
+Version: 0.8.0
+Requires:
+Libs: -L${libdir} -lyaml-cpp
+Cflags: -I${includedir}

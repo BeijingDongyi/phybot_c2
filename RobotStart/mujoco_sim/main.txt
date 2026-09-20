@@ -1,0 +1,109 @@
+/*
+This is part of OpenLoong Dynamics Control, an open project for the control of biped robot,
+Copyright (C) 2024 Humanoid Robot (Shanghai) Co., Ltd, under Apache 2.0.
+Feel free to use in any purpose, and cite OpenLoong-Dynamics-Control in any style, to contribute to the advancement of the community.
+ <https://atomgit.com/openloong/openloong-dyn-control.git>
+ <web@openloong.org.cn>
+*/
+#include <mujoco/mujoco.h>
+#include <GLFW/glfw3.h>
+#include <cstdio>
+#include <iostream>
+#include"DataPackage/include/DataPackage.h"
+#include "GLFW_callbacks.h"
+#include "mujoco_interface.h"
+#include <spdlog/spdlog.h>
+#include <spdlog/sinks/basic_file_sink.h> // 用于文件输出
+#include "WholeBodyControl/include/WBCSolver.h"
+#include "StateEstimator/include/StateEstimator.h"
+#include "StateMachine/include/statemachinemanager.h"
+
+
+//************************
+// main function
+int main(int argc, const char** argv)
+{
+    // ini classes
+
+    DataPackage package;
+    StateEstimator state_estimator;
+
+    package.init();
+    StateMachineManager manager;
+    manager.init(package);
+    // 设置日志级别
+    spdlog::set_level(spdlog::level::info); // 只记录INFO级别及以上的日志
+    // WBC_Solver::WeightedWBCSolver wbc(package);
+    spdlog::info("wbc load success!");
+
+    MujocoInterface MujocoInterface(package); // data interface for Mujoco
+    spdlog::info("interface load success!");
+
+    UIctr uiController(MujocoInterface.mj_model, MujocoInterface.mj_data);   // UI control for Mujoco
+
+    spdlog::info("model load success!");
+
+
+
+
+
+
+
+
+
+    /// ----------------- sim Loop ---------------
+    double simEndTime=30;
+    mjtNum simstart = MujocoInterface.mj_data->time;
+    double simTime = MujocoInterface.mj_data->time;
+
+
+    // init UI: GLFW
+    uiController.iniGLFW();
+    uiController.enableTracking(); // enable viewpoint tracking of the body 1 of the robot
+    uiController.createWindow("Demo",false);
+
+    while( !glfwWindowShouldClose(uiController.window))
+    {
+        // advance interactive simulation for 1/60 sec
+        //  Assuming MuJoCo can simulate faster than real-time, which it usually can,
+        //  this loop will finish on time for the next frame to be rendered at 60 fps.
+        //  Otherwise add a cpu timer and exit this loop when it is time to render.
+        simstart=MujocoInterface.mj_data->time;
+        while( MujocoInterface.mj_data->time - simstart < 1.0/60.0 && uiController.runSim) // press "1" to pause and resume, "2" to step the simulation
+        {
+
+            MujocoInterface.GetDataFromSim();
+            MujocoInterface.SetDataToPackage(package);
+
+            state_estimator.GetDataFromPackage(package);
+            state_estimator.Step();
+            state_estimator.SetDataToPackage(package);
+
+
+            manager.handleEvent(State::STANDING, Event::RUN, package);  
+
+
+            MujocoInterface.SetTorque(package);
+
+
+            mj_step(MujocoInterface.mj_model, MujocoInterface.mj_data);
+
+            simTime=MujocoInterface.mj_data->time;
+   
+
+
+        }
+
+        if (MujocoInterface.mj_data->time>=simEndTime)
+        {
+            break;
+        }
+
+        uiController.updateScene();
+    }
+
+//    // free visualization storage
+    uiController.Close();
+
+    return 0;
+}
