@@ -1,0 +1,110 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using IMU_TYPE: Hipnuc
+-- Found Torch: /package/ThirdParty/libtorch/lib/libtorch.so  
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Checking for module 'glib-2.0'
+--   Found glib-2.0, version 2.64.6
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /validation/customer/Hipnuc/realrobot_mini
+Scanning dependencies of target led_test
+Scanning dependencies of target led_off_test
+Scanning dependencies of target set_one_zero
+Scanning dependencies of target set_zero
+[  1%] Building CXX object CMakeFiles/led_off_test.dir/RobotStart/test/led_off_test.cpp.o
+[  2%] Building CXX object CMakeFiles/led_test.dir/RobotStart/test/led_test.cpp.o
+[  4%] Building CXX object CMakeFiles/set_one_zero.dir/RobotStart/test/set_one_zero.cpp.o
+[  5%] Building CXX object CMakeFiles/set_zero.dir/RobotStart/realrobot/set_zero_mini.cpp.o
+[  7%] Building CXX object CMakeFiles/led_off_test.dir/ZeroState/src/ZeroState.cpp.o
+[  8%] Building CXX object CMakeFiles/led_test.dir/ZeroState/src/ZeroState.cpp.o
+[ 10%] Building CXX object CMakeFiles/set_zero.dir/ZeroState/src/ZeroState.cpp.o
+[ 11%] Building CXX object CMakeFiles/set_one_zero.dir/ZeroState/src/ZeroState.cpp.o
+[ 13%] Building CXX object CMakeFiles/led_off_test.dir/device/Imu_hipnuc/linux/HipnucReader.cpp.o
+[ 14%] Building CXX object CMakeFiles/led_test.dir/device/Imu_hipnuc/linux/HipnucReader.cpp.o
+[ 16%] Building CXX object CMakeFiles/set_zero.dir/device/Imu_hipnuc/linux/HipnucReader.cpp.o
+[ 17%] Building CXX object CMakeFiles/set_one_zero.dir/device/Imu_hipnuc/linux/HipnucReader.cpp.o
+[ 19%] Building C object CMakeFiles/led_off_test.dir/device/Imu_hipnuc/linux/serial_port.c.o
+[ 20%] Building C object CMakeFiles/led_test.dir/device/Imu_hipnuc/linux/serial_port.c.o
+[ 22%] Building C object CMakeFiles/led_off_test.dir/device/Imu_hipnuc/linux/log.c.o
+[ 23%] Building C object CMakeFiles/led_off_test.dir/device/Imu_hipnuc/linux/fw_downloader/hex2bin.c.o
+[ 25%] Building C object CMakeFiles/led_test.dir/device/Imu_hipnuc/linux/log.c.o
+[ 26%] Building C object CMakeFiles/led_test.dir/device/Imu_hipnuc/linux/fw_downloader/hex2bin.c.o
+[ 28%] Building C object CMakeFiles/led_off_test.dir/device/Imu_hipnuc/linux/fw_downloader/kboot.c.o
+[ 29%] Building C object CMakeFiles/led_test.dir/device/Imu_hipnuc/linux/fw_downloader/kboot.c.o
+[ 31%] Building C object CMakeFiles/led_off_test.dir/device/Imu_hipnuc/lib/example_data.c.o
+[ 32%] Building C object CMakeFiles/led_test.dir/device/Imu_hipnuc/lib/example_data.c.o
+[ 34%] Building C object CMakeFiles/led_off_test.dir/device/Imu_hipnuc/lib/hipnuc_dec.c.o
+[ 35%] Building C object CMakeFiles/led_test.dir/device/Imu_hipnuc/lib/hipnuc_dec.c.o
+[ 37%] Building C object CMakeFiles/led_off_test.dir/device/Imu_hipnuc/lib/nmea_dec.c.o
+[ 38%] Building C object CMakeFiles/led_test.dir/device/Imu_hipnuc/lib/nmea_dec.c.o
+[ 40%] Linking CXX executable led_off_test
+[ 41%] Linking CXX executable led_test
+[ 41%] Built target led_off_test
+Scanning dependencies of target led_homing_test
+[ 41%] Built target led_test
+[ 43%] Building CXX object CMakeFiles/led_homing_test.dir/RobotStart/test/led_homing_test.cpp.o
+Scanning dependencies of target main
+[ 44%] Building CXX object CMakeFiles/main.dir/RobotStart/realrobot/run_mini.cpp.o
+[ 46%] Building C object CMakeFiles/set_zero.dir/device/Imu_hipnuc/linux/serial_port.c.o
+[ 47%] Building C object CMakeFiles/set_one_zero.dir/device/Imu_hipnuc/linux/serial_port.c.o
+[ 49%] Building C object CMakeFiles/set_zero.dir/device/Imu_hipnuc/linux/log.c.o
+[ 50%] Building C object CMakeFiles/set_one_zero.dir/device/Imu_hipnuc/linux/log.c.o
+[ 52%] Building C object CMakeFiles/set_zero.dir/device/Imu_hipnuc/linux/fw_downloader/hex2bin.c.o
+[ 53%] Building C object CMakeFiles/set_one_zero.dir/device/Imu_hipnuc/linux/fw_downloader/hex2bin.c.o
+[ 55%] Building C object CMakeFiles/set_zero.dir/device/Imu_hipnuc/linux/fw_downloader/kboot.c.o
+[ 56%] Building C object CMakeFiles/set_one_zero.dir/device/Imu_hipnuc/linux/fw_downloader/kboot.c.o
+[ 58%] Building C object CMakeFiles/set_zero.dir/device/Imu_hipnuc/lib/example_data.c.o
+[ 59%] Building C object CMakeFiles/set_one_zero.dir/device/Imu_hipnuc/lib/example_data.c.o
+[ 61%] Building C object CMakeFiles/set_zero.dir/device/Imu_hipnuc/lib/hipnuc_dec.c.o
+[ 62%] Building C object CMakeFiles/set_one_zero.dir/device/Imu_hipnuc/lib/hipnuc_dec.c.o
+[ 64%] Building C object CMakeFiles/set_zero.dir/device/Imu_hipnuc/lib/nmea_dec.c.o
+[ 65%] Building C object CMakeFiles/set_one_zero.dir/device/Imu_hipnuc/lib/nmea_dec.c.o
+[ 67%] Linking CXX executable set_zero
+[ 68%] Linking CXX executable set_one_zero
+[ 70%] Building CXX object CMakeFiles/led_homing_test.dir/ZeroState/src/ZeroState.cpp.o
+[ 70%] Built target set_zero
+[ 71%] Building CXX object CMakeFiles/led_homing_test.dir/device/Imu_hipnuc/linux/HipnucReader.cpp.o
+[ 71%] Built target set_one_zero
+[ 73%] Building C object CMakeFiles/led_homing_test.dir/device/Imu_hipnuc/linux/serial_port.c.o
+[ 74%] Building C object CMakeFiles/led_homing_test.dir/device/Imu_hipnuc/linux/log.c.o
+[ 76%] Building C object CMakeFiles/led_homing_test.dir/device/Imu_hipnuc/linux/fw_downloader/hex2bin.c.o
+[ 77%] Building C object CMakeFiles/led_homing_test.dir/device/Imu_hipnuc/linux/fw_downloader/kboot.c.o
+[ 79%] Building C object CMakeFiles/led_homing_test.dir/device/Imu_hipnuc/lib/example_data.c.o
+[ 80%] Building C object CMakeFiles/led_homing_test.dir/device/Imu_hipnuc/lib/hipnuc_dec.c.o
+[ 82%] Building C object CMakeFiles/led_homing_test.dir/device/Imu_hipnuc/lib/nmea_dec.c.o
+[ 83%] Building CXX object CMakeFiles/main.dir/ZeroState/src/ZeroState.cpp.o
+[ 85%] Building CXX object CMakeFiles/main.dir/device/Imu_hipnuc/linux/HipnucReader.cpp.o
+[ 86%] Linking CXX executable led_homing_test
+[ 88%] Building C object CMakeFiles/main.dir/device/Imu_hipnuc/linux/serial_port.c.o
+[ 89%] Building C object CMakeFiles/main.dir/device/Imu_hipnuc/linux/log.c.o
+[ 91%] Building C object CMakeFiles/main.dir/device/Imu_hipnuc/linux/fw_downloader/hex2bin.c.o
+[ 92%] Building C object CMakeFiles/main.dir/device/Imu_hipnuc/linux/fw_downloader/kboot.c.o
+[ 92%] Built target led_homing_test
+[ 94%] Building C object CMakeFiles/main.dir/device/Imu_hipnuc/lib/example_data.c.o
+[ 95%] Building C object CMakeFiles/main.dir/device/Imu_hipnuc/lib/hipnuc_dec.c.o
+[ 97%] Building C object CMakeFiles/main.dir/device/Imu_hipnuc/lib/nmea_dec.c.o
+[ 98%] Building CXX object CMakeFiles/main.dir/StateMachine/src/statemachinemanager.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main

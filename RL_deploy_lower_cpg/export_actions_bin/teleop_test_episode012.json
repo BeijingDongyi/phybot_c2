@@ -1,0 +1,15 @@
+{
+  "task_name": "teleop_test",
+  "repo_id": "local/teleop_test_teleop_test",
+  "episode_index": 0,
+  "T": 7269,
+  "dim": 21,
+  "dtype": "float32",
+  "layout": "row_major",
+  "endianness": "little",
+  "fps": 500.0,
+  "action_semantics": "qpos_in_action",
+  "joint_order": [],
+  "dataset_from_index": 0,
+  "dataset_to_index": 7269
+}

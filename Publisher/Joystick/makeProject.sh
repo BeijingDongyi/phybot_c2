@@ -1,10 +1,5 @@
-# 删除CMake缓存文件和临时目录（关键）
-rm -rf CMakeCache.txt CMakeFiles/
-
-# 重新执行cmake
-mkdir -p build && cd build
-cmake ..
-
-# 编译
-make -j8
-
+#!/usr/bin/env bash
+set -euo pipefail
+BASE_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+test -x "$BASE_DIR/build/Joystick_LCM"
+echo '使用已封装的 Joystick_LCM。'

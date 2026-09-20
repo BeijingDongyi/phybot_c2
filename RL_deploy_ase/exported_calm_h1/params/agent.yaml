@@ -1,0 +1,179 @@
+seed: 42
+device: cuda:0
+num_steps_per_env: 24
+max_iterations: 50000
+empirical_normalization: false
+policy:
+  class_name: ActorCritic
+  init_noise_std: 1.0
+  noise_std_type: scalar
+  actor_hidden_dims:
+  - 512
+  - 256
+  - 128
+  critic_hidden_dims:
+  - 512
+  - 256
+  - 128
+  activation: elu
+algorithm:
+  class_name: CalmPPO
+  num_learning_epochs: 5
+  num_mini_batches: 4
+  learning_rate: 0.001
+  schedule: adaptive
+  gamma: 0.99
+  lam: 0.95
+  entropy_coef: 0.005
+  desired_kl: 0.01
+  max_grad_norm: 1.0
+  value_loss_coef: 1.0
+  use_clipped_value_loss: true
+  clip_param: 0.2
+  normalize_advantage_per_mini_batch: false
+  symmetry_cfg:
+    use_data_augmentation: null
+    use_mirror_loss: false
+    data_augmentation_func: legged_lab.envs.phybot_c2.symmetry:get_symmetric_states
+    mirror_loss_coeff: 0.0
+  rnd_cfg: null
+clip_actions: null
+save_interval: 1000
+experiment_name: phybot_calm
+run_name: ''
+logger: tensorboard
+neptune_project: phybot_calm
+wandb_project: phybot_calm
+resume: false
+load_run: .*
+load_checkpoint: model_.*.pt
+runner_class_name: CalmOnPolicyRunner
+amp_reward_coef: 1.0
+amp_motion_files:
+- /home/user/Downloads/Phybot_Lab-ASE/legged_lab/envs/phybot_c2/datasets/motion_amp_expert/boxing_0519/boxing/avoid_counter_0p6-3.json
+- /home/user/Downloads/Phybot_Lab-ASE/legged_lab/envs/phybot_c2/datasets/motion_amp_expert/boxing_0519/boxing/hook_2p4-3p8.json
+- /home/user/Downloads/Phybot_Lab-ASE/legged_lab/envs/phybot_c2/datasets/motion_amp_expert/boxing_0519/boxing/uppercut_0p7-2p9.json
+- /home/user/Downloads/Phybot_Lab-ASE/legged_lab/envs/phybot_c2/datasets/motion_amp_expert/boxing_0519/stand.json
+amp_reset_root_state_dim: 13
+amp_num_preload_transitions: 0
+amp_task_reward_lerp: 0.3
+amp_discr_hidden_dims:
+- 1024
+- 512
+- 256
+add_disc_reward_style: calm
+add_diff_base_lin_vel_z_weight: 5.0
+add_diff_root_delta_z_weight: 10.0
+add_motion_reset_on_env_reset: true
+add_motion_reset_prob: 0.8
+add_terminate_on_motion_completion: true
+add_motion_completion_phase_threshold: 0.999
+calm_latent_dim: 64
+calm_z_window_seconds: 1.0
+calm_z_update_seconds: 0.5
+calm_z_update_time_min: 0.5
+calm_z_update_time_max: 1.0
+calm_motion_state_machine_enabled: true
+calm_change_locked_prob: 0.3
+calm_cond_window_seconds: 0.2
+calm_enc_hidden_dims:
+- 512
+- 256
+calm_cond_discr_hidden_dims:
+- 1024
+- 512
+- 256
+calm_cond_reward_style: calm
+calm_normalize_cond_obs: true
+add_disc_reward_weight: 1.0
+calm_cond_reward_weight: 1.0
+calm_cond_disc_loss_weight: 0.2
+calm_cond_grad_penalty_weight: 1.0
+calm_cond_batch_size: 1024
+calm_cond_grad_penalty_batch_size: 256
+calm_replay_buffer_size: 100000
+calm_z_local_pair_seconds: 0.1
+calm_z_transition_pair_seconds: 0.2
+calm_z_local_align_weight: 1.0
+calm_z_transition_align_weight: 1.0
+calm_z_uniformity_weight: 0.05
+calm_z_reg_batch_size: null
+calm_termination_enabled: true
+calm_height_error_threshold: 0.3
+min_normalized_std:
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+use_add: false
+calm_train_video_interval: 1000
+calm_train_video_steps: 300
+calm_train_video_fps: 50
+calm_train_video_frame_stride: 1
+calm_train_video_resolution: !!python/tuple
+- 640
+- 480
+calm_train_video_camera_eye: !!python/tuple
+- 3.0
+- -3.0
+- 1.8
+calm_train_video_camera_target: !!python/tuple
+- 0.0
+- 0.0
+- 0.8
+calm_task_reward_lerp: 0.7
+calm_task_reward_weight: 0.7
+calm_wrong_z_negative_weight: 0.3
+calm_amp_part_weights: {}
+calm_z_sampling_mode: random
+calm_normal_z_exclude_recovery: false
+calm_normal_z_sequential_prob: 0.3
+calm_recovery_z_match_prob: 0.0
+calm_recovery_z_random_prob: 0.0
+calm_recovery_z_sequential_prob: 0.0
+calm_recovery_z_match_gravity_weight: 0.0
+calm_recovery_z_match_height_weight: 0.0
+calm_recovery_z_match_height_std: 0.2
+calm_recovery_z_match_lookahead_seconds: 0.0
+calm_recovery_z_lock_by_entry_gravity: false
+calm_recovery_z_locked_sequential: false
+calm_recovery_z_locked_random_prob: 0.0
+calm_recovery_z_lock_match_start: false
+calm_recovery_z_cycle_failure_height_std: 0.2
+calm_recovery_z_cycle_failure_gravity_std: 0.5
+calm_recovery_z_keywords: !!python/tuple
+- recovery
+- getup
+- standup
+- stand_up
+- laydown
+- lay_down
+calm_recovery_relocalize_enabled: false
+calm_recovery_relocalize_height_weight: 0.0
+calm_recovery_relocalize_gravity_weight: 0.0
+calm_recovery_relocalize_height_std: 0.2
+calm_recovery_relocalize_gravity_std: 0.5
+calm_motion_reset_on_env_reset: true
+calm_motion_reset_prob: 0.5
+calm_sequential_motion_reset_ratio: 0.0
+calm_fall_init_prob: 0.0
+calm_recovery_episode_prob: 0.0
+calm_recovery_episode_seconds: 0.0
+calm_fall_recovery_enabled: false

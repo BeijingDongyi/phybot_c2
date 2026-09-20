@@ -1,0 +1,2133 @@
+{
+  "task": "phybot_walk",
+  "checkpoint": "/home/user/Downloads/Phybot_Lab-last_ase-add-0429/logs/phybot_walk_ase_add/2026-05-22_18-38-29_limit_torque/model_79798.pt",
+  "clip_seconds": 1.0,
+  "clip_frames": 50,
+  "latent_dim": 32,
+  "num_motions": 4,
+  "motion_order": [
+    "hook_20-120",
+    "punch_30-160",
+    "uppercat_280-380",
+    "stand_521"
+  ],
+  "motion_to_id": {
+    "hook_20-120": 0,
+    "punch_30-160": 1,
+    "uppercat_280-380": 2,
+    "stand_521": 3
+  },
+  "policy_path": "/home/user/Downloads/Phybot_Lab-last_ase-add-0429/logs/phybot_walk_ase_add/2026-05-22_18-38-29_limit_torque/exported_h1/h1_policy.pt",
+  "trace_stride_frames": 1,
+  "trace_step_seconds": 0.02,
+  "motions": {
+    "hook_20-120": {
+      "motion_id": 0,
+      "skill_name": "hook",
+      "trajectory_name": "hook_20-120",
+      "trajectory_index": 0,
+      "source_num_frames": 101,
+      "source_duration_seconds": 2.0,
+      "num_trace_steps": 52,
+      "trace_stride_frames": 1,
+      "trace_step_seconds": 0.02,
+      "trace_entries": [
+        {
+          "trace_step_index": 0,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 0,
+          "end_frame_index": 49,
+          "center_frame_index": 25
+        },
+        {
+          "trace_step_index": 1,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 1,
+          "end_frame_index": 50,
+          "center_frame_index": 26
+        },
+        {
+          "trace_step_index": 2,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 2,
+          "end_frame_index": 51,
+          "center_frame_index": 27
+        },
+        {
+          "trace_step_index": 3,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 3,
+          "end_frame_index": 52,
+          "center_frame_index": 28
+        },
+        {
+          "trace_step_index": 4,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 4,
+          "end_frame_index": 53,
+          "center_frame_index": 29
+        },
+        {
+          "trace_step_index": 5,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 5,
+          "end_frame_index": 54,
+          "center_frame_index": 30
+        },
+        {
+          "trace_step_index": 6,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 6,
+          "end_frame_index": 55,
+          "center_frame_index": 31
+        },
+        {
+          "trace_step_index": 7,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 7,
+          "end_frame_index": 56,
+          "center_frame_index": 32
+        },
+        {
+          "trace_step_index": 8,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 8,
+          "end_frame_index": 57,
+          "center_frame_index": 33
+        },
+        {
+          "trace_step_index": 9,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 9,
+          "end_frame_index": 58,
+          "center_frame_index": 34
+        },
+        {
+          "trace_step_index": 10,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 10,
+          "end_frame_index": 59,
+          "center_frame_index": 35
+        },
+        {
+          "trace_step_index": 11,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 11,
+          "end_frame_index": 60,
+          "center_frame_index": 36
+        },
+        {
+          "trace_step_index": 12,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 12,
+          "end_frame_index": 61,
+          "center_frame_index": 37
+        },
+        {
+          "trace_step_index": 13,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 13,
+          "end_frame_index": 62,
+          "center_frame_index": 38
+        },
+        {
+          "trace_step_index": 14,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 14,
+          "end_frame_index": 63,
+          "center_frame_index": 39
+        },
+        {
+          "trace_step_index": 15,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 15,
+          "end_frame_index": 64,
+          "center_frame_index": 40
+        },
+        {
+          "trace_step_index": 16,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 16,
+          "end_frame_index": 65,
+          "center_frame_index": 41
+        },
+        {
+          "trace_step_index": 17,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 17,
+          "end_frame_index": 66,
+          "center_frame_index": 42
+        },
+        {
+          "trace_step_index": 18,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 18,
+          "end_frame_index": 67,
+          "center_frame_index": 43
+        },
+        {
+          "trace_step_index": 19,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 19,
+          "end_frame_index": 68,
+          "center_frame_index": 44
+        },
+        {
+          "trace_step_index": 20,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 20,
+          "end_frame_index": 69,
+          "center_frame_index": 45
+        },
+        {
+          "trace_step_index": 21,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 21,
+          "end_frame_index": 70,
+          "center_frame_index": 46
+        },
+        {
+          "trace_step_index": 22,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 22,
+          "end_frame_index": 71,
+          "center_frame_index": 47
+        },
+        {
+          "trace_step_index": 23,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 23,
+          "end_frame_index": 72,
+          "center_frame_index": 48
+        },
+        {
+          "trace_step_index": 24,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 24,
+          "end_frame_index": 73,
+          "center_frame_index": 49
+        },
+        {
+          "trace_step_index": 25,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 25,
+          "end_frame_index": 74,
+          "center_frame_index": 50
+        },
+        {
+          "trace_step_index": 26,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 26,
+          "end_frame_index": 75,
+          "center_frame_index": 51
+        },
+        {
+          "trace_step_index": 27,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 27,
+          "end_frame_index": 76,
+          "center_frame_index": 52
+        },
+        {
+          "trace_step_index": 28,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 28,
+          "end_frame_index": 77,
+          "center_frame_index": 53
+        },
+        {
+          "trace_step_index": 29,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 29,
+          "end_frame_index": 78,
+          "center_frame_index": 54
+        },
+        {
+          "trace_step_index": 30,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 30,
+          "end_frame_index": 79,
+          "center_frame_index": 55
+        },
+        {
+          "trace_step_index": 31,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 31,
+          "end_frame_index": 80,
+          "center_frame_index": 56
+        },
+        {
+          "trace_step_index": 32,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 32,
+          "end_frame_index": 81,
+          "center_frame_index": 57
+        },
+        {
+          "trace_step_index": 33,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 33,
+          "end_frame_index": 82,
+          "center_frame_index": 58
+        },
+        {
+          "trace_step_index": 34,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 34,
+          "end_frame_index": 83,
+          "center_frame_index": 59
+        },
+        {
+          "trace_step_index": 35,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 35,
+          "end_frame_index": 84,
+          "center_frame_index": 60
+        },
+        {
+          "trace_step_index": 36,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 36,
+          "end_frame_index": 85,
+          "center_frame_index": 61
+        },
+        {
+          "trace_step_index": 37,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 37,
+          "end_frame_index": 86,
+          "center_frame_index": 62
+        },
+        {
+          "trace_step_index": 38,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 38,
+          "end_frame_index": 87,
+          "center_frame_index": 63
+        },
+        {
+          "trace_step_index": 39,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 39,
+          "end_frame_index": 88,
+          "center_frame_index": 64
+        },
+        {
+          "trace_step_index": 40,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 40,
+          "end_frame_index": 89,
+          "center_frame_index": 65
+        },
+        {
+          "trace_step_index": 41,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 41,
+          "end_frame_index": 90,
+          "center_frame_index": 66
+        },
+        {
+          "trace_step_index": 42,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 42,
+          "end_frame_index": 91,
+          "center_frame_index": 67
+        },
+        {
+          "trace_step_index": 43,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 43,
+          "end_frame_index": 92,
+          "center_frame_index": 68
+        },
+        {
+          "trace_step_index": 44,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 44,
+          "end_frame_index": 93,
+          "center_frame_index": 69
+        },
+        {
+          "trace_step_index": 45,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 45,
+          "end_frame_index": 94,
+          "center_frame_index": 70
+        },
+        {
+          "trace_step_index": 46,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 46,
+          "end_frame_index": 95,
+          "center_frame_index": 71
+        },
+        {
+          "trace_step_index": 47,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 47,
+          "end_frame_index": 96,
+          "center_frame_index": 72
+        },
+        {
+          "trace_step_index": 48,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 48,
+          "end_frame_index": 97,
+          "center_frame_index": 73
+        },
+        {
+          "trace_step_index": 49,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 49,
+          "end_frame_index": 98,
+          "center_frame_index": 74
+        },
+        {
+          "trace_step_index": 50,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 50,
+          "end_frame_index": 99,
+          "center_frame_index": 75
+        },
+        {
+          "trace_step_index": 51,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 51,
+          "end_frame_index": 100,
+          "center_frame_index": 76
+        }
+      ]
+    },
+    "punch_30-160": {
+      "motion_id": 1,
+      "skill_name": "punch",
+      "trajectory_name": "punch_30-160",
+      "trajectory_index": 1,
+      "source_num_frames": 131,
+      "source_duration_seconds": 2.6,
+      "num_trace_steps": 82,
+      "trace_stride_frames": 1,
+      "trace_step_seconds": 0.02,
+      "trace_entries": [
+        {
+          "trace_step_index": 0,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 0,
+          "end_frame_index": 49,
+          "center_frame_index": 25
+        },
+        {
+          "trace_step_index": 1,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 1,
+          "end_frame_index": 50,
+          "center_frame_index": 26
+        },
+        {
+          "trace_step_index": 2,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 2,
+          "end_frame_index": 51,
+          "center_frame_index": 27
+        },
+        {
+          "trace_step_index": 3,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 3,
+          "end_frame_index": 52,
+          "center_frame_index": 28
+        },
+        {
+          "trace_step_index": 4,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 4,
+          "end_frame_index": 53,
+          "center_frame_index": 29
+        },
+        {
+          "trace_step_index": 5,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 5,
+          "end_frame_index": 54,
+          "center_frame_index": 30
+        },
+        {
+          "trace_step_index": 6,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 6,
+          "end_frame_index": 55,
+          "center_frame_index": 31
+        },
+        {
+          "trace_step_index": 7,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 7,
+          "end_frame_index": 56,
+          "center_frame_index": 32
+        },
+        {
+          "trace_step_index": 8,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 8,
+          "end_frame_index": 57,
+          "center_frame_index": 33
+        },
+        {
+          "trace_step_index": 9,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 9,
+          "end_frame_index": 58,
+          "center_frame_index": 34
+        },
+        {
+          "trace_step_index": 10,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 10,
+          "end_frame_index": 59,
+          "center_frame_index": 35
+        },
+        {
+          "trace_step_index": 11,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 11,
+          "end_frame_index": 60,
+          "center_frame_index": 36
+        },
+        {
+          "trace_step_index": 12,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 12,
+          "end_frame_index": 61,
+          "center_frame_index": 37
+        },
+        {
+          "trace_step_index": 13,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 13,
+          "end_frame_index": 62,
+          "center_frame_index": 38
+        },
+        {
+          "trace_step_index": 14,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 14,
+          "end_frame_index": 63,
+          "center_frame_index": 39
+        },
+        {
+          "trace_step_index": 15,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 15,
+          "end_frame_index": 64,
+          "center_frame_index": 40
+        },
+        {
+          "trace_step_index": 16,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 16,
+          "end_frame_index": 65,
+          "center_frame_index": 41
+        },
+        {
+          "trace_step_index": 17,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 17,
+          "end_frame_index": 66,
+          "center_frame_index": 42
+        },
+        {
+          "trace_step_index": 18,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 18,
+          "end_frame_index": 67,
+          "center_frame_index": 43
+        },
+        {
+          "trace_step_index": 19,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 19,
+          "end_frame_index": 68,
+          "center_frame_index": 44
+        },
+        {
+          "trace_step_index": 20,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 20,
+          "end_frame_index": 69,
+          "center_frame_index": 45
+        },
+        {
+          "trace_step_index": 21,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 21,
+          "end_frame_index": 70,
+          "center_frame_index": 46
+        },
+        {
+          "trace_step_index": 22,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 22,
+          "end_frame_index": 71,
+          "center_frame_index": 47
+        },
+        {
+          "trace_step_index": 23,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 23,
+          "end_frame_index": 72,
+          "center_frame_index": 48
+        },
+        {
+          "trace_step_index": 24,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 24,
+          "end_frame_index": 73,
+          "center_frame_index": 49
+        },
+        {
+          "trace_step_index": 25,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 25,
+          "end_frame_index": 74,
+          "center_frame_index": 50
+        },
+        {
+          "trace_step_index": 26,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 26,
+          "end_frame_index": 75,
+          "center_frame_index": 51
+        },
+        {
+          "trace_step_index": 27,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 27,
+          "end_frame_index": 76,
+          "center_frame_index": 52
+        },
+        {
+          "trace_step_index": 28,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 28,
+          "end_frame_index": 77,
+          "center_frame_index": 53
+        },
+        {
+          "trace_step_index": 29,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 29,
+          "end_frame_index": 78,
+          "center_frame_index": 54
+        },
+        {
+          "trace_step_index": 30,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 30,
+          "end_frame_index": 79,
+          "center_frame_index": 55
+        },
+        {
+          "trace_step_index": 31,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 31,
+          "end_frame_index": 80,
+          "center_frame_index": 56
+        },
+        {
+          "trace_step_index": 32,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 32,
+          "end_frame_index": 81,
+          "center_frame_index": 57
+        },
+        {
+          "trace_step_index": 33,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 33,
+          "end_frame_index": 82,
+          "center_frame_index": 58
+        },
+        {
+          "trace_step_index": 34,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 34,
+          "end_frame_index": 83,
+          "center_frame_index": 59
+        },
+        {
+          "trace_step_index": 35,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 35,
+          "end_frame_index": 84,
+          "center_frame_index": 60
+        },
+        {
+          "trace_step_index": 36,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 36,
+          "end_frame_index": 85,
+          "center_frame_index": 61
+        },
+        {
+          "trace_step_index": 37,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 37,
+          "end_frame_index": 86,
+          "center_frame_index": 62
+        },
+        {
+          "trace_step_index": 38,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 38,
+          "end_frame_index": 87,
+          "center_frame_index": 63
+        },
+        {
+          "trace_step_index": 39,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 39,
+          "end_frame_index": 88,
+          "center_frame_index": 64
+        },
+        {
+          "trace_step_index": 40,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 40,
+          "end_frame_index": 89,
+          "center_frame_index": 65
+        },
+        {
+          "trace_step_index": 41,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 41,
+          "end_frame_index": 90,
+          "center_frame_index": 66
+        },
+        {
+          "trace_step_index": 42,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 42,
+          "end_frame_index": 91,
+          "center_frame_index": 67
+        },
+        {
+          "trace_step_index": 43,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 43,
+          "end_frame_index": 92,
+          "center_frame_index": 68
+        },
+        {
+          "trace_step_index": 44,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 44,
+          "end_frame_index": 93,
+          "center_frame_index": 69
+        },
+        {
+          "trace_step_index": 45,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 45,
+          "end_frame_index": 94,
+          "center_frame_index": 70
+        },
+        {
+          "trace_step_index": 46,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 46,
+          "end_frame_index": 95,
+          "center_frame_index": 71
+        },
+        {
+          "trace_step_index": 47,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 47,
+          "end_frame_index": 96,
+          "center_frame_index": 72
+        },
+        {
+          "trace_step_index": 48,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 48,
+          "end_frame_index": 97,
+          "center_frame_index": 73
+        },
+        {
+          "trace_step_index": 49,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 49,
+          "end_frame_index": 98,
+          "center_frame_index": 74
+        },
+        {
+          "trace_step_index": 50,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 50,
+          "end_frame_index": 99,
+          "center_frame_index": 75
+        },
+        {
+          "trace_step_index": 51,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 51,
+          "end_frame_index": 100,
+          "center_frame_index": 76
+        },
+        {
+          "trace_step_index": 52,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 52,
+          "end_frame_index": 101,
+          "center_frame_index": 77
+        },
+        {
+          "trace_step_index": 53,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 53,
+          "end_frame_index": 102,
+          "center_frame_index": 78
+        },
+        {
+          "trace_step_index": 54,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 54,
+          "end_frame_index": 103,
+          "center_frame_index": 79
+        },
+        {
+          "trace_step_index": 55,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 55,
+          "end_frame_index": 104,
+          "center_frame_index": 80
+        },
+        {
+          "trace_step_index": 56,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 56,
+          "end_frame_index": 105,
+          "center_frame_index": 81
+        },
+        {
+          "trace_step_index": 57,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 57,
+          "end_frame_index": 106,
+          "center_frame_index": 82
+        },
+        {
+          "trace_step_index": 58,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 58,
+          "end_frame_index": 107,
+          "center_frame_index": 83
+        },
+        {
+          "trace_step_index": 59,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 59,
+          "end_frame_index": 108,
+          "center_frame_index": 84
+        },
+        {
+          "trace_step_index": 60,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 60,
+          "end_frame_index": 109,
+          "center_frame_index": 85
+        },
+        {
+          "trace_step_index": 61,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 61,
+          "end_frame_index": 110,
+          "center_frame_index": 86
+        },
+        {
+          "trace_step_index": 62,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 62,
+          "end_frame_index": 111,
+          "center_frame_index": 87
+        },
+        {
+          "trace_step_index": 63,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 63,
+          "end_frame_index": 112,
+          "center_frame_index": 88
+        },
+        {
+          "trace_step_index": 64,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 64,
+          "end_frame_index": 113,
+          "center_frame_index": 89
+        },
+        {
+          "trace_step_index": 65,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 65,
+          "end_frame_index": 114,
+          "center_frame_index": 90
+        },
+        {
+          "trace_step_index": 66,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 66,
+          "end_frame_index": 115,
+          "center_frame_index": 91
+        },
+        {
+          "trace_step_index": 67,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 67,
+          "end_frame_index": 116,
+          "center_frame_index": 92
+        },
+        {
+          "trace_step_index": 68,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 68,
+          "end_frame_index": 117,
+          "center_frame_index": 93
+        },
+        {
+          "trace_step_index": 69,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 69,
+          "end_frame_index": 118,
+          "center_frame_index": 94
+        },
+        {
+          "trace_step_index": 70,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 70,
+          "end_frame_index": 119,
+          "center_frame_index": 95
+        },
+        {
+          "trace_step_index": 71,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 71,
+          "end_frame_index": 120,
+          "center_frame_index": 96
+        },
+        {
+          "trace_step_index": 72,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 72,
+          "end_frame_index": 121,
+          "center_frame_index": 97
+        },
+        {
+          "trace_step_index": 73,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 73,
+          "end_frame_index": 122,
+          "center_frame_index": 98
+        },
+        {
+          "trace_step_index": 74,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 74,
+          "end_frame_index": 123,
+          "center_frame_index": 99
+        },
+        {
+          "trace_step_index": 75,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 75,
+          "end_frame_index": 124,
+          "center_frame_index": 100
+        },
+        {
+          "trace_step_index": 76,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 76,
+          "end_frame_index": 125,
+          "center_frame_index": 101
+        },
+        {
+          "trace_step_index": 77,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 77,
+          "end_frame_index": 126,
+          "center_frame_index": 102
+        },
+        {
+          "trace_step_index": 78,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 78,
+          "end_frame_index": 127,
+          "center_frame_index": 103
+        },
+        {
+          "trace_step_index": 79,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 79,
+          "end_frame_index": 128,
+          "center_frame_index": 104
+        },
+        {
+          "trace_step_index": 80,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 80,
+          "end_frame_index": 129,
+          "center_frame_index": 105
+        },
+        {
+          "trace_step_index": 81,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 81,
+          "end_frame_index": 130,
+          "center_frame_index": 106
+        }
+      ]
+    },
+    "uppercat_280-380": {
+      "motion_id": 2,
+      "skill_name": "uppercat",
+      "trajectory_name": "uppercat_280-380",
+      "trajectory_index": 2,
+      "source_num_frames": 101,
+      "source_duration_seconds": 2.0,
+      "num_trace_steps": 52,
+      "trace_stride_frames": 1,
+      "trace_step_seconds": 0.02,
+      "trace_entries": [
+        {
+          "trace_step_index": 0,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 0,
+          "end_frame_index": 49,
+          "center_frame_index": 25
+        },
+        {
+          "trace_step_index": 1,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 1,
+          "end_frame_index": 50,
+          "center_frame_index": 26
+        },
+        {
+          "trace_step_index": 2,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 2,
+          "end_frame_index": 51,
+          "center_frame_index": 27
+        },
+        {
+          "trace_step_index": 3,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 3,
+          "end_frame_index": 52,
+          "center_frame_index": 28
+        },
+        {
+          "trace_step_index": 4,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 4,
+          "end_frame_index": 53,
+          "center_frame_index": 29
+        },
+        {
+          "trace_step_index": 5,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 5,
+          "end_frame_index": 54,
+          "center_frame_index": 30
+        },
+        {
+          "trace_step_index": 6,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 6,
+          "end_frame_index": 55,
+          "center_frame_index": 31
+        },
+        {
+          "trace_step_index": 7,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 7,
+          "end_frame_index": 56,
+          "center_frame_index": 32
+        },
+        {
+          "trace_step_index": 8,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 8,
+          "end_frame_index": 57,
+          "center_frame_index": 33
+        },
+        {
+          "trace_step_index": 9,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 9,
+          "end_frame_index": 58,
+          "center_frame_index": 34
+        },
+        {
+          "trace_step_index": 10,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 10,
+          "end_frame_index": 59,
+          "center_frame_index": 35
+        },
+        {
+          "trace_step_index": 11,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 11,
+          "end_frame_index": 60,
+          "center_frame_index": 36
+        },
+        {
+          "trace_step_index": 12,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 12,
+          "end_frame_index": 61,
+          "center_frame_index": 37
+        },
+        {
+          "trace_step_index": 13,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 13,
+          "end_frame_index": 62,
+          "center_frame_index": 38
+        },
+        {
+          "trace_step_index": 14,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 14,
+          "end_frame_index": 63,
+          "center_frame_index": 39
+        },
+        {
+          "trace_step_index": 15,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 15,
+          "end_frame_index": 64,
+          "center_frame_index": 40
+        },
+        {
+          "trace_step_index": 16,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 16,
+          "end_frame_index": 65,
+          "center_frame_index": 41
+        },
+        {
+          "trace_step_index": 17,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 17,
+          "end_frame_index": 66,
+          "center_frame_index": 42
+        },
+        {
+          "trace_step_index": 18,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 18,
+          "end_frame_index": 67,
+          "center_frame_index": 43
+        },
+        {
+          "trace_step_index": 19,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 19,
+          "end_frame_index": 68,
+          "center_frame_index": 44
+        },
+        {
+          "trace_step_index": 20,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 20,
+          "end_frame_index": 69,
+          "center_frame_index": 45
+        },
+        {
+          "trace_step_index": 21,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 21,
+          "end_frame_index": 70,
+          "center_frame_index": 46
+        },
+        {
+          "trace_step_index": 22,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 22,
+          "end_frame_index": 71,
+          "center_frame_index": 47
+        },
+        {
+          "trace_step_index": 23,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 23,
+          "end_frame_index": 72,
+          "center_frame_index": 48
+        },
+        {
+          "trace_step_index": 24,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 24,
+          "end_frame_index": 73,
+          "center_frame_index": 49
+        },
+        {
+          "trace_step_index": 25,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 25,
+          "end_frame_index": 74,
+          "center_frame_index": 50
+        },
+        {
+          "trace_step_index": 26,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 26,
+          "end_frame_index": 75,
+          "center_frame_index": 51
+        },
+        {
+          "trace_step_index": 27,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 27,
+          "end_frame_index": 76,
+          "center_frame_index": 52
+        },
+        {
+          "trace_step_index": 28,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 28,
+          "end_frame_index": 77,
+          "center_frame_index": 53
+        },
+        {
+          "trace_step_index": 29,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 29,
+          "end_frame_index": 78,
+          "center_frame_index": 54
+        },
+        {
+          "trace_step_index": 30,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 30,
+          "end_frame_index": 79,
+          "center_frame_index": 55
+        },
+        {
+          "trace_step_index": 31,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 31,
+          "end_frame_index": 80,
+          "center_frame_index": 56
+        },
+        {
+          "trace_step_index": 32,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 32,
+          "end_frame_index": 81,
+          "center_frame_index": 57
+        },
+        {
+          "trace_step_index": 33,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 33,
+          "end_frame_index": 82,
+          "center_frame_index": 58
+        },
+        {
+          "trace_step_index": 34,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 34,
+          "end_frame_index": 83,
+          "center_frame_index": 59
+        },
+        {
+          "trace_step_index": 35,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 35,
+          "end_frame_index": 84,
+          "center_frame_index": 60
+        },
+        {
+          "trace_step_index": 36,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 36,
+          "end_frame_index": 85,
+          "center_frame_index": 61
+        },
+        {
+          "trace_step_index": 37,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 37,
+          "end_frame_index": 86,
+          "center_frame_index": 62
+        },
+        {
+          "trace_step_index": 38,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 38,
+          "end_frame_index": 87,
+          "center_frame_index": 63
+        },
+        {
+          "trace_step_index": 39,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 39,
+          "end_frame_index": 88,
+          "center_frame_index": 64
+        },
+        {
+          "trace_step_index": 40,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 40,
+          "end_frame_index": 89,
+          "center_frame_index": 65
+        },
+        {
+          "trace_step_index": 41,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 41,
+          "end_frame_index": 90,
+          "center_frame_index": 66
+        },
+        {
+          "trace_step_index": 42,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 42,
+          "end_frame_index": 91,
+          "center_frame_index": 67
+        },
+        {
+          "trace_step_index": 43,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 43,
+          "end_frame_index": 92,
+          "center_frame_index": 68
+        },
+        {
+          "trace_step_index": 44,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 44,
+          "end_frame_index": 93,
+          "center_frame_index": 69
+        },
+        {
+          "trace_step_index": 45,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 45,
+          "end_frame_index": 94,
+          "center_frame_index": 70
+        },
+        {
+          "trace_step_index": 46,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 46,
+          "end_frame_index": 95,
+          "center_frame_index": 71
+        },
+        {
+          "trace_step_index": 47,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 47,
+          "end_frame_index": 96,
+          "center_frame_index": 72
+        },
+        {
+          "trace_step_index": 48,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 48,
+          "end_frame_index": 97,
+          "center_frame_index": 73
+        },
+        {
+          "trace_step_index": 49,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 49,
+          "end_frame_index": 98,
+          "center_frame_index": 74
+        },
+        {
+          "trace_step_index": 50,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 50,
+          "end_frame_index": 99,
+          "center_frame_index": 75
+        },
+        {
+          "trace_step_index": 51,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 51,
+          "end_frame_index": 100,
+          "center_frame_index": 76
+        }
+      ]
+    },
+    "stand_521": {
+      "motion_id": 3,
+      "skill_name": "stand",
+      "trajectory_name": "stand_521",
+      "trajectory_index": 3,
+      "source_num_frames": 120,
+      "source_duration_seconds": 2.38,
+      "num_trace_steps": 71,
+      "trace_stride_frames": 1,
+      "trace_step_seconds": 0.02,
+      "trace_entries": [
+        {
+          "trace_step_index": 0,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 0,
+          "end_frame_index": 49,
+          "center_frame_index": 25
+        },
+        {
+          "trace_step_index": 1,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 1,
+          "end_frame_index": 50,
+          "center_frame_index": 26
+        },
+        {
+          "trace_step_index": 2,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 2,
+          "end_frame_index": 51,
+          "center_frame_index": 27
+        },
+        {
+          "trace_step_index": 3,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 3,
+          "end_frame_index": 52,
+          "center_frame_index": 28
+        },
+        {
+          "trace_step_index": 4,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 4,
+          "end_frame_index": 53,
+          "center_frame_index": 29
+        },
+        {
+          "trace_step_index": 5,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 5,
+          "end_frame_index": 54,
+          "center_frame_index": 30
+        },
+        {
+          "trace_step_index": 6,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 6,
+          "end_frame_index": 55,
+          "center_frame_index": 31
+        },
+        {
+          "trace_step_index": 7,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 7,
+          "end_frame_index": 56,
+          "center_frame_index": 32
+        },
+        {
+          "trace_step_index": 8,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 8,
+          "end_frame_index": 57,
+          "center_frame_index": 33
+        },
+        {
+          "trace_step_index": 9,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 9,
+          "end_frame_index": 58,
+          "center_frame_index": 34
+        },
+        {
+          "trace_step_index": 10,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 10,
+          "end_frame_index": 59,
+          "center_frame_index": 35
+        },
+        {
+          "trace_step_index": 11,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 11,
+          "end_frame_index": 60,
+          "center_frame_index": 36
+        },
+        {
+          "trace_step_index": 12,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 12,
+          "end_frame_index": 61,
+          "center_frame_index": 37
+        },
+        {
+          "trace_step_index": 13,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 13,
+          "end_frame_index": 62,
+          "center_frame_index": 38
+        },
+        {
+          "trace_step_index": 14,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 14,
+          "end_frame_index": 63,
+          "center_frame_index": 39
+        },
+        {
+          "trace_step_index": 15,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 15,
+          "end_frame_index": 64,
+          "center_frame_index": 40
+        },
+        {
+          "trace_step_index": 16,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 16,
+          "end_frame_index": 65,
+          "center_frame_index": 41
+        },
+        {
+          "trace_step_index": 17,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 17,
+          "end_frame_index": 66,
+          "center_frame_index": 42
+        },
+        {
+          "trace_step_index": 18,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 18,
+          "end_frame_index": 67,
+          "center_frame_index": 43
+        },
+        {
+          "trace_step_index": 19,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 19,
+          "end_frame_index": 68,
+          "center_frame_index": 44
+        },
+        {
+          "trace_step_index": 20,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 20,
+          "end_frame_index": 69,
+          "center_frame_index": 45
+        },
+        {
+          "trace_step_index": 21,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 21,
+          "end_frame_index": 70,
+          "center_frame_index": 46
+        },
+        {
+          "trace_step_index": 22,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 22,
+          "end_frame_index": 71,
+          "center_frame_index": 47
+        },
+        {
+          "trace_step_index": 23,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 23,
+          "end_frame_index": 72,
+          "center_frame_index": 48
+        },
+        {
+          "trace_step_index": 24,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 24,
+          "end_frame_index": 73,
+          "center_frame_index": 49
+        },
+        {
+          "trace_step_index": 25,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 25,
+          "end_frame_index": 74,
+          "center_frame_index": 50
+        },
+        {
+          "trace_step_index": 26,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 26,
+          "end_frame_index": 75,
+          "center_frame_index": 51
+        },
+        {
+          "trace_step_index": 27,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 27,
+          "end_frame_index": 76,
+          "center_frame_index": 52
+        },
+        {
+          "trace_step_index": 28,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 28,
+          "end_frame_index": 77,
+          "center_frame_index": 53
+        },
+        {
+          "trace_step_index": 29,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 29,
+          "end_frame_index": 78,
+          "center_frame_index": 54
+        },
+        {
+          "trace_step_index": 30,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 30,
+          "end_frame_index": 79,
+          "center_frame_index": 55
+        },
+        {
+          "trace_step_index": 31,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 31,
+          "end_frame_index": 80,
+          "center_frame_index": 56
+        },
+        {
+          "trace_step_index": 32,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 32,
+          "end_frame_index": 81,
+          "center_frame_index": 57
+        },
+        {
+          "trace_step_index": 33,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 33,
+          "end_frame_index": 82,
+          "center_frame_index": 58
+        },
+        {
+          "trace_step_index": 34,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 34,
+          "end_frame_index": 83,
+          "center_frame_index": 59
+        },
+        {
+          "trace_step_index": 35,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 35,
+          "end_frame_index": 84,
+          "center_frame_index": 60
+        },
+        {
+          "trace_step_index": 36,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 36,
+          "end_frame_index": 85,
+          "center_frame_index": 61
+        },
+        {
+          "trace_step_index": 37,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 37,
+          "end_frame_index": 86,
+          "center_frame_index": 62
+        },
+        {
+          "trace_step_index": 38,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 38,
+          "end_frame_index": 87,
+          "center_frame_index": 63
+        },
+        {
+          "trace_step_index": 39,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 39,
+          "end_frame_index": 88,
+          "center_frame_index": 64
+        },
+        {
+          "trace_step_index": 40,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 40,
+          "end_frame_index": 89,
+          "center_frame_index": 65
+        },
+        {
+          "trace_step_index": 41,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 41,
+          "end_frame_index": 90,
+          "center_frame_index": 66
+        },
+        {
+          "trace_step_index": 42,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 42,
+          "end_frame_index": 91,
+          "center_frame_index": 67
+        },
+        {
+          "trace_step_index": 43,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 43,
+          "end_frame_index": 92,
+          "center_frame_index": 68
+        },
+        {
+          "trace_step_index": 44,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 44,
+          "end_frame_index": 93,
+          "center_frame_index": 69
+        },
+        {
+          "trace_step_index": 45,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 45,
+          "end_frame_index": 94,
+          "center_frame_index": 70
+        },
+        {
+          "trace_step_index": 46,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 46,
+          "end_frame_index": 95,
+          "center_frame_index": 71
+        },
+        {
+          "trace_step_index": 47,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 47,
+          "end_frame_index": 96,
+          "center_frame_index": 72
+        },
+        {
+          "trace_step_index": 48,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 48,
+          "end_frame_index": 97,
+          "center_frame_index": 73
+        },
+        {
+          "trace_step_index": 49,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 49,
+          "end_frame_index": 98,
+          "center_frame_index": 74
+        },
+        {
+          "trace_step_index": 50,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 50,
+          "end_frame_index": 99,
+          "center_frame_index": 75
+        },
+        {
+          "trace_step_index": 51,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 51,
+          "end_frame_index": 100,
+          "center_frame_index": 76
+        },
+        {
+          "trace_step_index": 52,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 52,
+          "end_frame_index": 101,
+          "center_frame_index": 77
+        },
+        {
+          "trace_step_index": 53,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 53,
+          "end_frame_index": 102,
+          "center_frame_index": 78
+        },
+        {
+          "trace_step_index": 54,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 54,
+          "end_frame_index": 103,
+          "center_frame_index": 79
+        },
+        {
+          "trace_step_index": 55,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 55,
+          "end_frame_index": 104,
+          "center_frame_index": 80
+        },
+        {
+          "trace_step_index": 56,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 56,
+          "end_frame_index": 105,
+          "center_frame_index": 81
+        },
+        {
+          "trace_step_index": 57,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 57,
+          "end_frame_index": 106,
+          "center_frame_index": 82
+        },
+        {
+          "trace_step_index": 58,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 58,
+          "end_frame_index": 107,
+          "center_frame_index": 83
+        },
+        {
+          "trace_step_index": 59,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 59,
+          "end_frame_index": 108,
+          "center_frame_index": 84
+        },
+        {
+          "trace_step_index": 60,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 60,
+          "end_frame_index": 109,
+          "center_frame_index": 85
+        },
+        {
+          "trace_step_index": 61,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 61,
+          "end_frame_index": 110,
+          "center_frame_index": 86
+        },
+        {
+          "trace_step_index": 62,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 62,
+          "end_frame_index": 111,
+          "center_frame_index": 87
+        },
+        {
+          "trace_step_index": 63,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 63,
+          "end_frame_index": 112,
+          "center_frame_index": 88
+        },
+        {
+          "trace_step_index": 64,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 64,
+          "end_frame_index": 113,
+          "center_frame_index": 89
+        },
+        {
+          "trace_step_index": 65,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 65,
+          "end_frame_index": 114,
+          "center_frame_index": 90
+        },
+        {
+          "trace_step_index": 66,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 66,
+          "end_frame_index": 115,
+          "center_frame_index": 91
+        },
+        {
+          "trace_step_index": 67,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 67,
+          "end_frame_index": 116,
+          "center_frame_index": 92
+        },
+        {
+          "trace_step_index": 68,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 68,
+          "end_frame_index": 117,
+          "center_frame_index": 93
+        },
+        {
+          "trace_step_index": 69,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 69,
+          "end_frame_index": 118,
+          "center_frame_index": 94
+        },
+        {
+          "trace_step_index": 70,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 70,
+          "end_frame_index": 119,
+          "center_frame_index": 95
+        }
+      ]
+    }
+  }
+}

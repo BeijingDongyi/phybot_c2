@@ -1,0 +1,83 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using IMU_TYPE: Hipnuc
+-- Found Torch: /package/ThirdParty/libtorch/lib/libtorch.so  
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Checking for module 'glib-2.0'
+--   Found glib-2.0, version 2.64.6
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /validation/customer/Hipnuc/Robot_test
+Scanning dependencies of target read_pos
+Scanning dependencies of target set_one_zero
+Scanning dependencies of target imu_test
+Scanning dependencies of target set_one_Enable
+[  2%] Building CXX object CMakeFiles/read_pos.dir/RobotStart/test/read_pos.cpp.o
+[  4%] Building CXX object CMakeFiles/set_one_zero.dir/RobotStart/test/set_one_zero.cpp.o
+[  6%] Building CXX object CMakeFiles/imu_test.dir/RobotStart/test/imu_test.cpp.o
+[  9%] Building CXX object CMakeFiles/set_one_Enable.dir/RobotStart/test/set_one_Enable.cpp.o
+[ 11%] Building CXX object CMakeFiles/read_pos.dir/ZeroState/src/ZeroState.cpp.o
+[ 13%] Building CXX object CMakeFiles/imu_test.dir/ZeroState/src/ZeroState.cpp.o
+[ 15%] Building CXX object CMakeFiles/set_one_Enable.dir/ZeroState/src/ZeroState.cpp.o
+[ 18%] Building CXX object CMakeFiles/set_one_zero.dir/ZeroState/src/ZeroState.cpp.o
+[ 20%] Building CXX object CMakeFiles/read_pos.dir/device/Imu_hipnuc/linux/HipnucReader.cpp.o
+[ 22%] Building CXX object CMakeFiles/imu_test.dir/device/Imu_hipnuc/linux/HipnucReader.cpp.o
+[ 25%] Building CXX object CMakeFiles/set_one_Enable.dir/device/Imu_hipnuc/linux/HipnucReader.cpp.o
+[ 27%] Building CXX object CMakeFiles/set_one_zero.dir/device/Imu_hipnuc/linux/HipnucReader.cpp.o
+[ 29%] Building C object CMakeFiles/read_pos.dir/device/Imu_hipnuc/linux/serial_port.c.o
+[ 31%] Building C object CMakeFiles/imu_test.dir/device/Imu_hipnuc/linux/serial_port.c.o
+[ 34%] Building C object CMakeFiles/read_pos.dir/device/Imu_hipnuc/linux/log.c.o
+[ 36%] Building C object CMakeFiles/imu_test.dir/device/Imu_hipnuc/linux/log.c.o
+[ 38%] Building C object CMakeFiles/read_pos.dir/device/Imu_hipnuc/linux/fw_downloader/hex2bin.c.o
+[ 40%] Building C object CMakeFiles/imu_test.dir/device/Imu_hipnuc/linux/fw_downloader/hex2bin.c.o
+[ 43%] Building C object CMakeFiles/read_pos.dir/device/Imu_hipnuc/linux/fw_downloader/kboot.c.o
+[ 45%] Building C object CMakeFiles/imu_test.dir/device/Imu_hipnuc/linux/fw_downloader/kboot.c.o
+[ 47%] Building C object CMakeFiles/read_pos.dir/device/Imu_hipnuc/lib/example_data.c.o
+[ 50%] Building C object CMakeFiles/imu_test.dir/device/Imu_hipnuc/lib/example_data.c.o
+[ 52%] Building C object CMakeFiles/read_pos.dir/device/Imu_hipnuc/lib/hipnuc_dec.c.o
+[ 54%] Building C object CMakeFiles/set_one_Enable.dir/device/Imu_hipnuc/linux/serial_port.c.o
+[ 56%] Building C object CMakeFiles/imu_test.dir/device/Imu_hipnuc/lib/hipnuc_dec.c.o
+[ 59%] Building C object CMakeFiles/read_pos.dir/device/Imu_hipnuc/lib/nmea_dec.c.o
+[ 61%] Building C object CMakeFiles/set_one_zero.dir/device/Imu_hipnuc/linux/serial_port.c.o
+[ 63%] Building C object CMakeFiles/set_one_Enable.dir/device/Imu_hipnuc/linux/log.c.o
+[ 65%] Building C object CMakeFiles/imu_test.dir/device/Imu_hipnuc/lib/nmea_dec.c.o
+[ 68%] Linking CXX executable read_pos
+[ 70%] Building C object CMakeFiles/set_one_zero.dir/device/Imu_hipnuc/linux/log.c.o
+[ 72%] Building C object CMakeFiles/set_one_Enable.dir/device/Imu_hipnuc/linux/fw_downloader/hex2bin.c.o
+[ 75%] Building C object CMakeFiles/set_one_zero.dir/device/Imu_hipnuc/linux/fw_downloader/hex2bin.c.o
+[ 77%] Linking CXX executable imu_test
+[ 79%] Building C object CMakeFiles/set_one_Enable.dir/device/Imu_hipnuc/linux/fw_downloader/kboot.c.o
+[ 81%] Building C object CMakeFiles/set_one_zero.dir/device/Imu_hipnuc/linux/fw_downloader/kboot.c.o
+[ 84%] Building C object CMakeFiles/set_one_Enable.dir/device/Imu_hipnuc/lib/example_data.c.o
+[ 86%] Building C object CMakeFiles/set_one_zero.dir/device/Imu_hipnuc/lib/example_data.c.o
+[ 88%] Building C object CMakeFiles/set_one_Enable.dir/device/Imu_hipnuc/lib/hipnuc_dec.c.o
+[ 90%] Building C object CMakeFiles/set_one_zero.dir/device/Imu_hipnuc/lib/hipnuc_dec.c.o
+[ 93%] Building C object CMakeFiles/set_one_Enable.dir/device/Imu_hipnuc/lib/nmea_dec.c.o
+[ 95%] Building C object CMakeFiles/set_one_zero.dir/device/Imu_hipnuc/lib/nmea_dec.c.o
+[ 97%] Linking CXX executable set_one_Enable
+[100%] Linking CXX executable set_one_zero
+[100%] Built target read_pos
+[100%] Built target imu_test
+[100%] Built target set_one_Enable
+[100%] Built target set_one_zero

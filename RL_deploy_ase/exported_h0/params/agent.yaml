@@ -1,0 +1,117 @@
+seed: 42
+device: cuda:0
+num_steps_per_env: 24
+max_iterations: 50000
+empirical_normalization: false
+policy:
+  class_name: ActorCritic
+  init_noise_std: 1.0
+  noise_std_type: scalar
+  actor_hidden_dims:
+  - 512
+  - 256
+  - 128
+  critic_hidden_dims:
+  - 512
+  - 256
+  - 128
+  activation: elu
+algorithm:
+  class_name: ASEPPO
+  num_learning_epochs: 5
+  num_mini_batches: 4
+  learning_rate: 0.001
+  schedule: adaptive
+  gamma: 0.99
+  lam: 0.95
+  entropy_coef: 0.005
+  desired_kl: 0.01
+  max_grad_norm: 1.0
+  value_loss_coef: 1.0
+  use_clipped_value_loss: true
+  clip_param: 0.2
+  normalize_advantage_per_mini_batch: false
+  symmetry_cfg:
+    use_data_augmentation: null
+    use_mirror_loss: false
+    data_augmentation_func: legged_lab.envs.phybot_c2.symmetry:get_symmetric_states
+    mirror_loss_coeff: 0.0
+  rnd_cfg: null
+clip_actions: null
+save_interval: 200
+experiment_name: phybot_walk_ase
+run_name: ''
+logger: tensorboard
+neptune_project: phybot_walk
+wandb_project: phybot_walk
+resume: false
+load_run: 2026-04-02_20-55-29
+load_checkpoint: model_.*.pt
+runner_class_name: AseOnPolicyRunner
+amp_reward_coef: 2.0
+amp_motion_files:
+- /home/user/Downloads/Phybot_Lab-ASE/legged_lab/envs/phybot_c2/datasets/motion_amp_expert/traj_c2_0402/box_0.5-6.0s.json
+- /home/user/Downloads/Phybot_Lab-ASE/legged_lab/envs/phybot_c2/datasets/motion_amp_expert/traj_c2_0402/kick_2.4-5.2s.json
+- /home/user/Downloads/Phybot_Lab-ASE/legged_lab/envs/phybot_c2/datasets/motion_amp_expert/traj_c2_0402/squant_0.6-4.2s.json
+- /home/user/Downloads/Phybot_Lab-ASE/legged_lab/envs/phybot_c2/datasets/motion_amp_expert/traj_c2_0402/stand_5.2-5.7s.json
+amp_reset_root_state_dim: 13
+amp_num_preload_transitions: 200000
+amp_task_reward_lerp: 0.0
+amp_discr_hidden_dims:
+- 1024
+- 512
+- 256
+min_normalized_std:
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+- 0.05
+use_ase: true
+ase_latent_dim: 32
+ase_motion_clip_seconds: 0.8
+ase_disc_window_seconds: 0.2
+ase_disc_window_frames: 10
+ase_latent_time_min: 0.0
+ase_latent_time_max: 2.0
+ase_disc_reward_style: calm
+ase_negative_demo_samples: false
+ase_motion_reset_on_env_reset: true
+ase_motion_reset_prob: 0.8
+ase_enc_loss_weight: 0.1
+ase_enc_pair_offset_seconds: 0.2
+ase_enc_reg_batch_size: 1024
+ase_diversity_weight: 0.2
+ase_diversity_target: 1.0
+ase_enc_hidden_dims:
+- 1024
+- 512
+- 256
+ase_replay_buffer_size: 100000
+skill_logging_enabled: true
+skill_diagnostics_interval: 1000
+skill_diagnostics_max_clips_per_skill: 256
+skill_diagnostics_clip_stride_frames: 5
+skill_diagnostics_num_policy_obs_samples: 256
+skill_diagnostics_num_action_latents_per_skill: 16
+skill_diagnostics_filename: skill_diagnostics_latest.json
+skill_score_representation_weight: 0.2
+skill_score_controllability_weight: 0.3
+skill_score_execution_weight: 0.5
+ase_motion_clip_frames: 40

@@ -1,0 +1,45 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using IMU_TYPE: Hipnuc
+-- Found Torch: /package/ThirdParty/libtorch/lib/libtorch.so  
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Checking for module 'glib-2.0'
+--   Found glib-2.0, version 2.64.6
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /validation/customer/Hipnuc/mujoco_sim_mini
+Scanning dependencies of target main
+[  8%] Building CXX object CMakeFiles/main.dir/RobotStart/mujoco_sim/main.cc.o
+[ 33%] Building C object CMakeFiles/main.dir/device/Imu_hipnuc/linux/serial_port.c.o
+[ 16%] Building CXX object CMakeFiles/main.dir/ZeroState/src/ZeroState.cpp.o
+[ 33%] Building CXX object CMakeFiles/main.dir/device/Imu_hipnuc/linux/HipnucReader.cpp.o
+[ 41%] Building C object CMakeFiles/main.dir/device/Imu_hipnuc/linux/log.c.o
+[ 50%] Building C object CMakeFiles/main.dir/device/Imu_hipnuc/linux/fw_downloader/hex2bin.c.o
+[ 58%] Building C object CMakeFiles/main.dir/device/Imu_hipnuc/linux/fw_downloader/kboot.c.o
+[ 66%] Building C object CMakeFiles/main.dir/device/Imu_hipnuc/lib/example_data.c.o
+[ 75%] Building C object CMakeFiles/main.dir/device/Imu_hipnuc/lib/hipnuc_dec.c.o
+[ 83%] Building C object CMakeFiles/main.dir/device/Imu_hipnuc/lib/nmea_dec.c.o
+[ 91%] Building CXX object CMakeFiles/main.dir/StateMachine/src/statemachinemanager.cpp.o
+[100%] Linking CXX executable main
+[100%] Built target main

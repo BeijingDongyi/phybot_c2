@@ -1,1 +1,2 @@
-lib/
+/ThirdParty/libtorch/lib/libdnnl.a
+/ThirdParty/libtorch/lib/libtorch_cpu.so

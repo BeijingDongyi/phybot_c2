@@ -1,0 +1,3886 @@
+{
+  "task": "phybot_walk",
+  "checkpoint": "/home/user/Downloads/Phybot_Lab-ASE/logs/phybot_walk_ase/2026-04-02_20-55-29/model_27400.pt",
+  "clip_seconds": 0.8,
+  "clip_frames": 40,
+  "latent_dim": 32,
+  "num_motions": 3,
+  "motion_order": [
+    "box_0.5-6.0s",
+    "kick_2.4-5.2s",
+    "squant_0.6-4.2s"
+  ],
+  "motion_to_id": {
+    "box_0.5-6.0s": 0,
+    "kick_2.4-5.2s": 1,
+    "squant_0.6-4.2s": 2
+  },
+  "policy_path": "/home/user/Downloads/Phybot_Lab-ASE/logs/phybot_walk_ase/2026-04-02_20-55-29/exported_h0/h1_policy.pt",
+  "trace_stride_frames": 1,
+  "trace_step_seconds": 0.02,
+  "motions": {
+    "box_0.5-6.0s": {
+      "motion_id": 0,
+      "skill_name": "box",
+      "trajectory_name": "box_0.5-6.0s",
+      "trajectory_index": 0,
+      "source_num_frames": 275,
+      "source_duration_seconds": 5.48,
+      "num_trace_steps": 236,
+      "trace_stride_frames": 1,
+      "trace_step_seconds": 0.02,
+      "trace_entries": [
+        {
+          "trace_step_index": 0,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 0,
+          "end_frame_index": 39,
+          "center_frame_index": 20
+        },
+        {
+          "trace_step_index": 1,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 1,
+          "end_frame_index": 40,
+          "center_frame_index": 21
+        },
+        {
+          "trace_step_index": 2,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 2,
+          "end_frame_index": 41,
+          "center_frame_index": 22
+        },
+        {
+          "trace_step_index": 3,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 3,
+          "end_frame_index": 42,
+          "center_frame_index": 23
+        },
+        {
+          "trace_step_index": 4,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 4,
+          "end_frame_index": 43,
+          "center_frame_index": 24
+        },
+        {
+          "trace_step_index": 5,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 5,
+          "end_frame_index": 44,
+          "center_frame_index": 25
+        },
+        {
+          "trace_step_index": 6,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 6,
+          "end_frame_index": 45,
+          "center_frame_index": 26
+        },
+        {
+          "trace_step_index": 7,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 7,
+          "end_frame_index": 46,
+          "center_frame_index": 27
+        },
+        {
+          "trace_step_index": 8,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 8,
+          "end_frame_index": 47,
+          "center_frame_index": 28
+        },
+        {
+          "trace_step_index": 9,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 9,
+          "end_frame_index": 48,
+          "center_frame_index": 29
+        },
+        {
+          "trace_step_index": 10,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 10,
+          "end_frame_index": 49,
+          "center_frame_index": 30
+        },
+        {
+          "trace_step_index": 11,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 11,
+          "end_frame_index": 50,
+          "center_frame_index": 31
+        },
+        {
+          "trace_step_index": 12,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 12,
+          "end_frame_index": 51,
+          "center_frame_index": 32
+        },
+        {
+          "trace_step_index": 13,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 13,
+          "end_frame_index": 52,
+          "center_frame_index": 33
+        },
+        {
+          "trace_step_index": 14,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 14,
+          "end_frame_index": 53,
+          "center_frame_index": 34
+        },
+        {
+          "trace_step_index": 15,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 15,
+          "end_frame_index": 54,
+          "center_frame_index": 35
+        },
+        {
+          "trace_step_index": 16,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 16,
+          "end_frame_index": 55,
+          "center_frame_index": 36
+        },
+        {
+          "trace_step_index": 17,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 17,
+          "end_frame_index": 56,
+          "center_frame_index": 37
+        },
+        {
+          "trace_step_index": 18,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 18,
+          "end_frame_index": 57,
+          "center_frame_index": 38
+        },
+        {
+          "trace_step_index": 19,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 19,
+          "end_frame_index": 58,
+          "center_frame_index": 39
+        },
+        {
+          "trace_step_index": 20,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 20,
+          "end_frame_index": 59,
+          "center_frame_index": 40
+        },
+        {
+          "trace_step_index": 21,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 21,
+          "end_frame_index": 60,
+          "center_frame_index": 41
+        },
+        {
+          "trace_step_index": 22,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 22,
+          "end_frame_index": 61,
+          "center_frame_index": 42
+        },
+        {
+          "trace_step_index": 23,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 23,
+          "end_frame_index": 62,
+          "center_frame_index": 43
+        },
+        {
+          "trace_step_index": 24,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 24,
+          "end_frame_index": 63,
+          "center_frame_index": 44
+        },
+        {
+          "trace_step_index": 25,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 25,
+          "end_frame_index": 64,
+          "center_frame_index": 45
+        },
+        {
+          "trace_step_index": 26,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 26,
+          "end_frame_index": 65,
+          "center_frame_index": 46
+        },
+        {
+          "trace_step_index": 27,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 27,
+          "end_frame_index": 66,
+          "center_frame_index": 47
+        },
+        {
+          "trace_step_index": 28,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 28,
+          "end_frame_index": 67,
+          "center_frame_index": 48
+        },
+        {
+          "trace_step_index": 29,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 29,
+          "end_frame_index": 68,
+          "center_frame_index": 49
+        },
+        {
+          "trace_step_index": 30,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 30,
+          "end_frame_index": 69,
+          "center_frame_index": 50
+        },
+        {
+          "trace_step_index": 31,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 31,
+          "end_frame_index": 70,
+          "center_frame_index": 51
+        },
+        {
+          "trace_step_index": 32,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 32,
+          "end_frame_index": 71,
+          "center_frame_index": 52
+        },
+        {
+          "trace_step_index": 33,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 33,
+          "end_frame_index": 72,
+          "center_frame_index": 53
+        },
+        {
+          "trace_step_index": 34,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 34,
+          "end_frame_index": 73,
+          "center_frame_index": 54
+        },
+        {
+          "trace_step_index": 35,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 35,
+          "end_frame_index": 74,
+          "center_frame_index": 55
+        },
+        {
+          "trace_step_index": 36,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 36,
+          "end_frame_index": 75,
+          "center_frame_index": 56
+        },
+        {
+          "trace_step_index": 37,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 37,
+          "end_frame_index": 76,
+          "center_frame_index": 57
+        },
+        {
+          "trace_step_index": 38,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 38,
+          "end_frame_index": 77,
+          "center_frame_index": 58
+        },
+        {
+          "trace_step_index": 39,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 39,
+          "end_frame_index": 78,
+          "center_frame_index": 59
+        },
+        {
+          "trace_step_index": 40,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 40,
+          "end_frame_index": 79,
+          "center_frame_index": 60
+        },
+        {
+          "trace_step_index": 41,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 41,
+          "end_frame_index": 80,
+          "center_frame_index": 61
+        },
+        {
+          "trace_step_index": 42,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 42,
+          "end_frame_index": 81,
+          "center_frame_index": 62
+        },
+        {
+          "trace_step_index": 43,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 43,
+          "end_frame_index": 82,
+          "center_frame_index": 63
+        },
+        {
+          "trace_step_index": 44,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 44,
+          "end_frame_index": 83,
+          "center_frame_index": 64
+        },
+        {
+          "trace_step_index": 45,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 45,
+          "end_frame_index": 84,
+          "center_frame_index": 65
+        },
+        {
+          "trace_step_index": 46,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 46,
+          "end_frame_index": 85,
+          "center_frame_index": 66
+        },
+        {
+          "trace_step_index": 47,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 47,
+          "end_frame_index": 86,
+          "center_frame_index": 67
+        },
+        {
+          "trace_step_index": 48,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 48,
+          "end_frame_index": 87,
+          "center_frame_index": 68
+        },
+        {
+          "trace_step_index": 49,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 49,
+          "end_frame_index": 88,
+          "center_frame_index": 69
+        },
+        {
+          "trace_step_index": 50,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 50,
+          "end_frame_index": 89,
+          "center_frame_index": 70
+        },
+        {
+          "trace_step_index": 51,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 51,
+          "end_frame_index": 90,
+          "center_frame_index": 71
+        },
+        {
+          "trace_step_index": 52,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 52,
+          "end_frame_index": 91,
+          "center_frame_index": 72
+        },
+        {
+          "trace_step_index": 53,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 53,
+          "end_frame_index": 92,
+          "center_frame_index": 73
+        },
+        {
+          "trace_step_index": 54,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 54,
+          "end_frame_index": 93,
+          "center_frame_index": 74
+        },
+        {
+          "trace_step_index": 55,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 55,
+          "end_frame_index": 94,
+          "center_frame_index": 75
+        },
+        {
+          "trace_step_index": 56,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 56,
+          "end_frame_index": 95,
+          "center_frame_index": 76
+        },
+        {
+          "trace_step_index": 57,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 57,
+          "end_frame_index": 96,
+          "center_frame_index": 77
+        },
+        {
+          "trace_step_index": 58,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 58,
+          "end_frame_index": 97,
+          "center_frame_index": 78
+        },
+        {
+          "trace_step_index": 59,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 59,
+          "end_frame_index": 98,
+          "center_frame_index": 79
+        },
+        {
+          "trace_step_index": 60,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 60,
+          "end_frame_index": 99,
+          "center_frame_index": 80
+        },
+        {
+          "trace_step_index": 61,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 61,
+          "end_frame_index": 100,
+          "center_frame_index": 81
+        },
+        {
+          "trace_step_index": 62,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 62,
+          "end_frame_index": 101,
+          "center_frame_index": 82
+        },
+        {
+          "trace_step_index": 63,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 63,
+          "end_frame_index": 102,
+          "center_frame_index": 83
+        },
+        {
+          "trace_step_index": 64,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 64,
+          "end_frame_index": 103,
+          "center_frame_index": 84
+        },
+        {
+          "trace_step_index": 65,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 65,
+          "end_frame_index": 104,
+          "center_frame_index": 85
+        },
+        {
+          "trace_step_index": 66,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 66,
+          "end_frame_index": 105,
+          "center_frame_index": 86
+        },
+        {
+          "trace_step_index": 67,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 67,
+          "end_frame_index": 106,
+          "center_frame_index": 87
+        },
+        {
+          "trace_step_index": 68,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 68,
+          "end_frame_index": 107,
+          "center_frame_index": 88
+        },
+        {
+          "trace_step_index": 69,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 69,
+          "end_frame_index": 108,
+          "center_frame_index": 89
+        },
+        {
+          "trace_step_index": 70,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 70,
+          "end_frame_index": 109,
+          "center_frame_index": 90
+        },
+        {
+          "trace_step_index": 71,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 71,
+          "end_frame_index": 110,
+          "center_frame_index": 91
+        },
+        {
+          "trace_step_index": 72,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 72,
+          "end_frame_index": 111,
+          "center_frame_index": 92
+        },
+        {
+          "trace_step_index": 73,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 73,
+          "end_frame_index": 112,
+          "center_frame_index": 93
+        },
+        {
+          "trace_step_index": 74,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 74,
+          "end_frame_index": 113,
+          "center_frame_index": 94
+        },
+        {
+          "trace_step_index": 75,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 75,
+          "end_frame_index": 114,
+          "center_frame_index": 95
+        },
+        {
+          "trace_step_index": 76,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 76,
+          "end_frame_index": 115,
+          "center_frame_index": 96
+        },
+        {
+          "trace_step_index": 77,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 77,
+          "end_frame_index": 116,
+          "center_frame_index": 97
+        },
+        {
+          "trace_step_index": 78,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 78,
+          "end_frame_index": 117,
+          "center_frame_index": 98
+        },
+        {
+          "trace_step_index": 79,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 79,
+          "end_frame_index": 118,
+          "center_frame_index": 99
+        },
+        {
+          "trace_step_index": 80,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 80,
+          "end_frame_index": 119,
+          "center_frame_index": 100
+        },
+        {
+          "trace_step_index": 81,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 81,
+          "end_frame_index": 120,
+          "center_frame_index": 101
+        },
+        {
+          "trace_step_index": 82,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 82,
+          "end_frame_index": 121,
+          "center_frame_index": 102
+        },
+        {
+          "trace_step_index": 83,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 83,
+          "end_frame_index": 122,
+          "center_frame_index": 103
+        },
+        {
+          "trace_step_index": 84,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 84,
+          "end_frame_index": 123,
+          "center_frame_index": 104
+        },
+        {
+          "trace_step_index": 85,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 85,
+          "end_frame_index": 124,
+          "center_frame_index": 105
+        },
+        {
+          "trace_step_index": 86,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 86,
+          "end_frame_index": 125,
+          "center_frame_index": 106
+        },
+        {
+          "trace_step_index": 87,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 87,
+          "end_frame_index": 126,
+          "center_frame_index": 107
+        },
+        {
+          "trace_step_index": 88,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 88,
+          "end_frame_index": 127,
+          "center_frame_index": 108
+        },
+        {
+          "trace_step_index": 89,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 89,
+          "end_frame_index": 128,
+          "center_frame_index": 109
+        },
+        {
+          "trace_step_index": 90,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 90,
+          "end_frame_index": 129,
+          "center_frame_index": 110
+        },
+        {
+          "trace_step_index": 91,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 91,
+          "end_frame_index": 130,
+          "center_frame_index": 111
+        },
+        {
+          "trace_step_index": 92,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 92,
+          "end_frame_index": 131,
+          "center_frame_index": 112
+        },
+        {
+          "trace_step_index": 93,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 93,
+          "end_frame_index": 132,
+          "center_frame_index": 113
+        },
+        {
+          "trace_step_index": 94,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 94,
+          "end_frame_index": 133,
+          "center_frame_index": 114
+        },
+        {
+          "trace_step_index": 95,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 95,
+          "end_frame_index": 134,
+          "center_frame_index": 115
+        },
+        {
+          "trace_step_index": 96,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 96,
+          "end_frame_index": 135,
+          "center_frame_index": 116
+        },
+        {
+          "trace_step_index": 97,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 97,
+          "end_frame_index": 136,
+          "center_frame_index": 117
+        },
+        {
+          "trace_step_index": 98,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 98,
+          "end_frame_index": 137,
+          "center_frame_index": 118
+        },
+        {
+          "trace_step_index": 99,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 99,
+          "end_frame_index": 138,
+          "center_frame_index": 119
+        },
+        {
+          "trace_step_index": 100,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 100,
+          "end_frame_index": 139,
+          "center_frame_index": 120
+        },
+        {
+          "trace_step_index": 101,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 101,
+          "end_frame_index": 140,
+          "center_frame_index": 121
+        },
+        {
+          "trace_step_index": 102,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 102,
+          "end_frame_index": 141,
+          "center_frame_index": 122
+        },
+        {
+          "trace_step_index": 103,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 103,
+          "end_frame_index": 142,
+          "center_frame_index": 123
+        },
+        {
+          "trace_step_index": 104,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 104,
+          "end_frame_index": 143,
+          "center_frame_index": 124
+        },
+        {
+          "trace_step_index": 105,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 105,
+          "end_frame_index": 144,
+          "center_frame_index": 125
+        },
+        {
+          "trace_step_index": 106,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 106,
+          "end_frame_index": 145,
+          "center_frame_index": 126
+        },
+        {
+          "trace_step_index": 107,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 107,
+          "end_frame_index": 146,
+          "center_frame_index": 127
+        },
+        {
+          "trace_step_index": 108,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 108,
+          "end_frame_index": 147,
+          "center_frame_index": 128
+        },
+        {
+          "trace_step_index": 109,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 109,
+          "end_frame_index": 148,
+          "center_frame_index": 129
+        },
+        {
+          "trace_step_index": 110,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 110,
+          "end_frame_index": 149,
+          "center_frame_index": 130
+        },
+        {
+          "trace_step_index": 111,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 111,
+          "end_frame_index": 150,
+          "center_frame_index": 131
+        },
+        {
+          "trace_step_index": 112,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 112,
+          "end_frame_index": 151,
+          "center_frame_index": 132
+        },
+        {
+          "trace_step_index": 113,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 113,
+          "end_frame_index": 152,
+          "center_frame_index": 133
+        },
+        {
+          "trace_step_index": 114,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 114,
+          "end_frame_index": 153,
+          "center_frame_index": 134
+        },
+        {
+          "trace_step_index": 115,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 115,
+          "end_frame_index": 154,
+          "center_frame_index": 135
+        },
+        {
+          "trace_step_index": 116,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 116,
+          "end_frame_index": 155,
+          "center_frame_index": 136
+        },
+        {
+          "trace_step_index": 117,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 117,
+          "end_frame_index": 156,
+          "center_frame_index": 137
+        },
+        {
+          "trace_step_index": 118,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 118,
+          "end_frame_index": 157,
+          "center_frame_index": 138
+        },
+        {
+          "trace_step_index": 119,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 119,
+          "end_frame_index": 158,
+          "center_frame_index": 139
+        },
+        {
+          "trace_step_index": 120,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 120,
+          "end_frame_index": 159,
+          "center_frame_index": 140
+        },
+        {
+          "trace_step_index": 121,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 121,
+          "end_frame_index": 160,
+          "center_frame_index": 141
+        },
+        {
+          "trace_step_index": 122,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 122,
+          "end_frame_index": 161,
+          "center_frame_index": 142
+        },
+        {
+          "trace_step_index": 123,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 123,
+          "end_frame_index": 162,
+          "center_frame_index": 143
+        },
+        {
+          "trace_step_index": 124,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 124,
+          "end_frame_index": 163,
+          "center_frame_index": 144
+        },
+        {
+          "trace_step_index": 125,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 125,
+          "end_frame_index": 164,
+          "center_frame_index": 145
+        },
+        {
+          "trace_step_index": 126,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 126,
+          "end_frame_index": 165,
+          "center_frame_index": 146
+        },
+        {
+          "trace_step_index": 127,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 127,
+          "end_frame_index": 166,
+          "center_frame_index": 147
+        },
+        {
+          "trace_step_index": 128,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 128,
+          "end_frame_index": 167,
+          "center_frame_index": 148
+        },
+        {
+          "trace_step_index": 129,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 129,
+          "end_frame_index": 168,
+          "center_frame_index": 149
+        },
+        {
+          "trace_step_index": 130,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 130,
+          "end_frame_index": 169,
+          "center_frame_index": 150
+        },
+        {
+          "trace_step_index": 131,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 131,
+          "end_frame_index": 170,
+          "center_frame_index": 151
+        },
+        {
+          "trace_step_index": 132,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 132,
+          "end_frame_index": 171,
+          "center_frame_index": 152
+        },
+        {
+          "trace_step_index": 133,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 133,
+          "end_frame_index": 172,
+          "center_frame_index": 153
+        },
+        {
+          "trace_step_index": 134,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 134,
+          "end_frame_index": 173,
+          "center_frame_index": 154
+        },
+        {
+          "trace_step_index": 135,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 135,
+          "end_frame_index": 174,
+          "center_frame_index": 155
+        },
+        {
+          "trace_step_index": 136,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 136,
+          "end_frame_index": 175,
+          "center_frame_index": 156
+        },
+        {
+          "trace_step_index": 137,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 137,
+          "end_frame_index": 176,
+          "center_frame_index": 157
+        },
+        {
+          "trace_step_index": 138,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 138,
+          "end_frame_index": 177,
+          "center_frame_index": 158
+        },
+        {
+          "trace_step_index": 139,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 139,
+          "end_frame_index": 178,
+          "center_frame_index": 159
+        },
+        {
+          "trace_step_index": 140,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 140,
+          "end_frame_index": 179,
+          "center_frame_index": 160
+        },
+        {
+          "trace_step_index": 141,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 141,
+          "end_frame_index": 180,
+          "center_frame_index": 161
+        },
+        {
+          "trace_step_index": 142,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 142,
+          "end_frame_index": 181,
+          "center_frame_index": 162
+        },
+        {
+          "trace_step_index": 143,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 143,
+          "end_frame_index": 182,
+          "center_frame_index": 163
+        },
+        {
+          "trace_step_index": 144,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 144,
+          "end_frame_index": 183,
+          "center_frame_index": 164
+        },
+        {
+          "trace_step_index": 145,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 145,
+          "end_frame_index": 184,
+          "center_frame_index": 165
+        },
+        {
+          "trace_step_index": 146,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 146,
+          "end_frame_index": 185,
+          "center_frame_index": 166
+        },
+        {
+          "trace_step_index": 147,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 147,
+          "end_frame_index": 186,
+          "center_frame_index": 167
+        },
+        {
+          "trace_step_index": 148,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 148,
+          "end_frame_index": 187,
+          "center_frame_index": 168
+        },
+        {
+          "trace_step_index": 149,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 149,
+          "end_frame_index": 188,
+          "center_frame_index": 169
+        },
+        {
+          "trace_step_index": 150,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 150,
+          "end_frame_index": 189,
+          "center_frame_index": 170
+        },
+        {
+          "trace_step_index": 151,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 151,
+          "end_frame_index": 190,
+          "center_frame_index": 171
+        },
+        {
+          "trace_step_index": 152,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 152,
+          "end_frame_index": 191,
+          "center_frame_index": 172
+        },
+        {
+          "trace_step_index": 153,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 153,
+          "end_frame_index": 192,
+          "center_frame_index": 173
+        },
+        {
+          "trace_step_index": 154,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 154,
+          "end_frame_index": 193,
+          "center_frame_index": 174
+        },
+        {
+          "trace_step_index": 155,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 155,
+          "end_frame_index": 194,
+          "center_frame_index": 175
+        },
+        {
+          "trace_step_index": 156,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 156,
+          "end_frame_index": 195,
+          "center_frame_index": 176
+        },
+        {
+          "trace_step_index": 157,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 157,
+          "end_frame_index": 196,
+          "center_frame_index": 177
+        },
+        {
+          "trace_step_index": 158,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 158,
+          "end_frame_index": 197,
+          "center_frame_index": 178
+        },
+        {
+          "trace_step_index": 159,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 159,
+          "end_frame_index": 198,
+          "center_frame_index": 179
+        },
+        {
+          "trace_step_index": 160,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 160,
+          "end_frame_index": 199,
+          "center_frame_index": 180
+        },
+        {
+          "trace_step_index": 161,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 161,
+          "end_frame_index": 200,
+          "center_frame_index": 181
+        },
+        {
+          "trace_step_index": 162,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 162,
+          "end_frame_index": 201,
+          "center_frame_index": 182
+        },
+        {
+          "trace_step_index": 163,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 163,
+          "end_frame_index": 202,
+          "center_frame_index": 183
+        },
+        {
+          "trace_step_index": 164,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 164,
+          "end_frame_index": 203,
+          "center_frame_index": 184
+        },
+        {
+          "trace_step_index": 165,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 165,
+          "end_frame_index": 204,
+          "center_frame_index": 185
+        },
+        {
+          "trace_step_index": 166,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 166,
+          "end_frame_index": 205,
+          "center_frame_index": 186
+        },
+        {
+          "trace_step_index": 167,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 167,
+          "end_frame_index": 206,
+          "center_frame_index": 187
+        },
+        {
+          "trace_step_index": 168,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 168,
+          "end_frame_index": 207,
+          "center_frame_index": 188
+        },
+        {
+          "trace_step_index": 169,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 169,
+          "end_frame_index": 208,
+          "center_frame_index": 189
+        },
+        {
+          "trace_step_index": 170,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 170,
+          "end_frame_index": 209,
+          "center_frame_index": 190
+        },
+        {
+          "trace_step_index": 171,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 171,
+          "end_frame_index": 210,
+          "center_frame_index": 191
+        },
+        {
+          "trace_step_index": 172,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 172,
+          "end_frame_index": 211,
+          "center_frame_index": 192
+        },
+        {
+          "trace_step_index": 173,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 173,
+          "end_frame_index": 212,
+          "center_frame_index": 193
+        },
+        {
+          "trace_step_index": 174,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 174,
+          "end_frame_index": 213,
+          "center_frame_index": 194
+        },
+        {
+          "trace_step_index": 175,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 175,
+          "end_frame_index": 214,
+          "center_frame_index": 195
+        },
+        {
+          "trace_step_index": 176,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 176,
+          "end_frame_index": 215,
+          "center_frame_index": 196
+        },
+        {
+          "trace_step_index": 177,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 177,
+          "end_frame_index": 216,
+          "center_frame_index": 197
+        },
+        {
+          "trace_step_index": 178,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 178,
+          "end_frame_index": 217,
+          "center_frame_index": 198
+        },
+        {
+          "trace_step_index": 179,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 179,
+          "end_frame_index": 218,
+          "center_frame_index": 199
+        },
+        {
+          "trace_step_index": 180,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 180,
+          "end_frame_index": 219,
+          "center_frame_index": 200
+        },
+        {
+          "trace_step_index": 181,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 181,
+          "end_frame_index": 220,
+          "center_frame_index": 201
+        },
+        {
+          "trace_step_index": 182,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 182,
+          "end_frame_index": 221,
+          "center_frame_index": 202
+        },
+        {
+          "trace_step_index": 183,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 183,
+          "end_frame_index": 222,
+          "center_frame_index": 203
+        },
+        {
+          "trace_step_index": 184,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 184,
+          "end_frame_index": 223,
+          "center_frame_index": 204
+        },
+        {
+          "trace_step_index": 185,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 185,
+          "end_frame_index": 224,
+          "center_frame_index": 205
+        },
+        {
+          "trace_step_index": 186,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 186,
+          "end_frame_index": 225,
+          "center_frame_index": 206
+        },
+        {
+          "trace_step_index": 187,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 187,
+          "end_frame_index": 226,
+          "center_frame_index": 207
+        },
+        {
+          "trace_step_index": 188,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 188,
+          "end_frame_index": 227,
+          "center_frame_index": 208
+        },
+        {
+          "trace_step_index": 189,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 189,
+          "end_frame_index": 228,
+          "center_frame_index": 209
+        },
+        {
+          "trace_step_index": 190,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 190,
+          "end_frame_index": 229,
+          "center_frame_index": 210
+        },
+        {
+          "trace_step_index": 191,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 191,
+          "end_frame_index": 230,
+          "center_frame_index": 211
+        },
+        {
+          "trace_step_index": 192,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 192,
+          "end_frame_index": 231,
+          "center_frame_index": 212
+        },
+        {
+          "trace_step_index": 193,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 193,
+          "end_frame_index": 232,
+          "center_frame_index": 213
+        },
+        {
+          "trace_step_index": 194,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 194,
+          "end_frame_index": 233,
+          "center_frame_index": 214
+        },
+        {
+          "trace_step_index": 195,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 195,
+          "end_frame_index": 234,
+          "center_frame_index": 215
+        },
+        {
+          "trace_step_index": 196,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 196,
+          "end_frame_index": 235,
+          "center_frame_index": 216
+        },
+        {
+          "trace_step_index": 197,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 197,
+          "end_frame_index": 236,
+          "center_frame_index": 217
+        },
+        {
+          "trace_step_index": 198,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 198,
+          "end_frame_index": 237,
+          "center_frame_index": 218
+        },
+        {
+          "trace_step_index": 199,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 199,
+          "end_frame_index": 238,
+          "center_frame_index": 219
+        },
+        {
+          "trace_step_index": 200,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 200,
+          "end_frame_index": 239,
+          "center_frame_index": 220
+        },
+        {
+          "trace_step_index": 201,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 201,
+          "end_frame_index": 240,
+          "center_frame_index": 221
+        },
+        {
+          "trace_step_index": 202,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 202,
+          "end_frame_index": 241,
+          "center_frame_index": 222
+        },
+        {
+          "trace_step_index": 203,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 203,
+          "end_frame_index": 242,
+          "center_frame_index": 223
+        },
+        {
+          "trace_step_index": 204,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 204,
+          "end_frame_index": 243,
+          "center_frame_index": 224
+        },
+        {
+          "trace_step_index": 205,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 205,
+          "end_frame_index": 244,
+          "center_frame_index": 225
+        },
+        {
+          "trace_step_index": 206,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 206,
+          "end_frame_index": 245,
+          "center_frame_index": 226
+        },
+        {
+          "trace_step_index": 207,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 207,
+          "end_frame_index": 246,
+          "center_frame_index": 227
+        },
+        {
+          "trace_step_index": 208,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 208,
+          "end_frame_index": 247,
+          "center_frame_index": 228
+        },
+        {
+          "trace_step_index": 209,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 209,
+          "end_frame_index": 248,
+          "center_frame_index": 229
+        },
+        {
+          "trace_step_index": 210,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 210,
+          "end_frame_index": 249,
+          "center_frame_index": 230
+        },
+        {
+          "trace_step_index": 211,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 211,
+          "end_frame_index": 250,
+          "center_frame_index": 231
+        },
+        {
+          "trace_step_index": 212,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 212,
+          "end_frame_index": 251,
+          "center_frame_index": 232
+        },
+        {
+          "trace_step_index": 213,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 213,
+          "end_frame_index": 252,
+          "center_frame_index": 233
+        },
+        {
+          "trace_step_index": 214,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 214,
+          "end_frame_index": 253,
+          "center_frame_index": 234
+        },
+        {
+          "trace_step_index": 215,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 215,
+          "end_frame_index": 254,
+          "center_frame_index": 235
+        },
+        {
+          "trace_step_index": 216,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 216,
+          "end_frame_index": 255,
+          "center_frame_index": 236
+        },
+        {
+          "trace_step_index": 217,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 217,
+          "end_frame_index": 256,
+          "center_frame_index": 237
+        },
+        {
+          "trace_step_index": 218,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 218,
+          "end_frame_index": 257,
+          "center_frame_index": 238
+        },
+        {
+          "trace_step_index": 219,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 219,
+          "end_frame_index": 258,
+          "center_frame_index": 239
+        },
+        {
+          "trace_step_index": 220,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 220,
+          "end_frame_index": 259,
+          "center_frame_index": 240
+        },
+        {
+          "trace_step_index": 221,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 221,
+          "end_frame_index": 260,
+          "center_frame_index": 241
+        },
+        {
+          "trace_step_index": 222,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 222,
+          "end_frame_index": 261,
+          "center_frame_index": 242
+        },
+        {
+          "trace_step_index": 223,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 223,
+          "end_frame_index": 262,
+          "center_frame_index": 243
+        },
+        {
+          "trace_step_index": 224,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 224,
+          "end_frame_index": 263,
+          "center_frame_index": 244
+        },
+        {
+          "trace_step_index": 225,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 225,
+          "end_frame_index": 264,
+          "center_frame_index": 245
+        },
+        {
+          "trace_step_index": 226,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 226,
+          "end_frame_index": 265,
+          "center_frame_index": 246
+        },
+        {
+          "trace_step_index": 227,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 227,
+          "end_frame_index": 266,
+          "center_frame_index": 247
+        },
+        {
+          "trace_step_index": 228,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 228,
+          "end_frame_index": 267,
+          "center_frame_index": 248
+        },
+        {
+          "trace_step_index": 229,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 229,
+          "end_frame_index": 268,
+          "center_frame_index": 249
+        },
+        {
+          "trace_step_index": 230,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 230,
+          "end_frame_index": 269,
+          "center_frame_index": 250
+        },
+        {
+          "trace_step_index": 231,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 231,
+          "end_frame_index": 270,
+          "center_frame_index": 251
+        },
+        {
+          "trace_step_index": 232,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 232,
+          "end_frame_index": 271,
+          "center_frame_index": 252
+        },
+        {
+          "trace_step_index": 233,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 233,
+          "end_frame_index": 272,
+          "center_frame_index": 253
+        },
+        {
+          "trace_step_index": 234,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 234,
+          "end_frame_index": 273,
+          "center_frame_index": 254
+        },
+        {
+          "trace_step_index": 235,
+          "trajectory_name": "box_0.5-6.0s",
+          "trajectory_index": 0,
+          "start_frame_index": 235,
+          "end_frame_index": 274,
+          "center_frame_index": 255
+        }
+      ]
+    },
+    "kick_2.4-5.2s": {
+      "motion_id": 1,
+      "skill_name": "kick",
+      "trajectory_name": "kick_2.4-5.2s",
+      "trajectory_index": 1,
+      "source_num_frames": 140,
+      "source_duration_seconds": 2.7800000000000002,
+      "num_trace_steps": 101,
+      "trace_stride_frames": 1,
+      "trace_step_seconds": 0.02,
+      "trace_entries": [
+        {
+          "trace_step_index": 0,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 0,
+          "end_frame_index": 39,
+          "center_frame_index": 20
+        },
+        {
+          "trace_step_index": 1,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 1,
+          "end_frame_index": 40,
+          "center_frame_index": 21
+        },
+        {
+          "trace_step_index": 2,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 2,
+          "end_frame_index": 41,
+          "center_frame_index": 22
+        },
+        {
+          "trace_step_index": 3,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 3,
+          "end_frame_index": 42,
+          "center_frame_index": 23
+        },
+        {
+          "trace_step_index": 4,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 4,
+          "end_frame_index": 43,
+          "center_frame_index": 24
+        },
+        {
+          "trace_step_index": 5,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 5,
+          "end_frame_index": 44,
+          "center_frame_index": 25
+        },
+        {
+          "trace_step_index": 6,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 6,
+          "end_frame_index": 45,
+          "center_frame_index": 26
+        },
+        {
+          "trace_step_index": 7,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 7,
+          "end_frame_index": 46,
+          "center_frame_index": 27
+        },
+        {
+          "trace_step_index": 8,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 8,
+          "end_frame_index": 47,
+          "center_frame_index": 28
+        },
+        {
+          "trace_step_index": 9,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 9,
+          "end_frame_index": 48,
+          "center_frame_index": 29
+        },
+        {
+          "trace_step_index": 10,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 10,
+          "end_frame_index": 49,
+          "center_frame_index": 30
+        },
+        {
+          "trace_step_index": 11,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 11,
+          "end_frame_index": 50,
+          "center_frame_index": 31
+        },
+        {
+          "trace_step_index": 12,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 12,
+          "end_frame_index": 51,
+          "center_frame_index": 32
+        },
+        {
+          "trace_step_index": 13,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 13,
+          "end_frame_index": 52,
+          "center_frame_index": 33
+        },
+        {
+          "trace_step_index": 14,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 14,
+          "end_frame_index": 53,
+          "center_frame_index": 34
+        },
+        {
+          "trace_step_index": 15,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 15,
+          "end_frame_index": 54,
+          "center_frame_index": 35
+        },
+        {
+          "trace_step_index": 16,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 16,
+          "end_frame_index": 55,
+          "center_frame_index": 36
+        },
+        {
+          "trace_step_index": 17,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 17,
+          "end_frame_index": 56,
+          "center_frame_index": 37
+        },
+        {
+          "trace_step_index": 18,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 18,
+          "end_frame_index": 57,
+          "center_frame_index": 38
+        },
+        {
+          "trace_step_index": 19,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 19,
+          "end_frame_index": 58,
+          "center_frame_index": 39
+        },
+        {
+          "trace_step_index": 20,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 20,
+          "end_frame_index": 59,
+          "center_frame_index": 40
+        },
+        {
+          "trace_step_index": 21,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 21,
+          "end_frame_index": 60,
+          "center_frame_index": 41
+        },
+        {
+          "trace_step_index": 22,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 22,
+          "end_frame_index": 61,
+          "center_frame_index": 42
+        },
+        {
+          "trace_step_index": 23,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 23,
+          "end_frame_index": 62,
+          "center_frame_index": 43
+        },
+        {
+          "trace_step_index": 24,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 24,
+          "end_frame_index": 63,
+          "center_frame_index": 44
+        },
+        {
+          "trace_step_index": 25,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 25,
+          "end_frame_index": 64,
+          "center_frame_index": 45
+        },
+        {
+          "trace_step_index": 26,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 26,
+          "end_frame_index": 65,
+          "center_frame_index": 46
+        },
+        {
+          "trace_step_index": 27,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 27,
+          "end_frame_index": 66,
+          "center_frame_index": 47
+        },
+        {
+          "trace_step_index": 28,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 28,
+          "end_frame_index": 67,
+          "center_frame_index": 48
+        },
+        {
+          "trace_step_index": 29,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 29,
+          "end_frame_index": 68,
+          "center_frame_index": 49
+        },
+        {
+          "trace_step_index": 30,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 30,
+          "end_frame_index": 69,
+          "center_frame_index": 50
+        },
+        {
+          "trace_step_index": 31,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 31,
+          "end_frame_index": 70,
+          "center_frame_index": 51
+        },
+        {
+          "trace_step_index": 32,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 32,
+          "end_frame_index": 71,
+          "center_frame_index": 52
+        },
+        {
+          "trace_step_index": 33,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 33,
+          "end_frame_index": 72,
+          "center_frame_index": 53
+        },
+        {
+          "trace_step_index": 34,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 34,
+          "end_frame_index": 73,
+          "center_frame_index": 54
+        },
+        {
+          "trace_step_index": 35,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 35,
+          "end_frame_index": 74,
+          "center_frame_index": 55
+        },
+        {
+          "trace_step_index": 36,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 36,
+          "end_frame_index": 75,
+          "center_frame_index": 56
+        },
+        {
+          "trace_step_index": 37,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 37,
+          "end_frame_index": 76,
+          "center_frame_index": 57
+        },
+        {
+          "trace_step_index": 38,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 38,
+          "end_frame_index": 77,
+          "center_frame_index": 58
+        },
+        {
+          "trace_step_index": 39,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 39,
+          "end_frame_index": 78,
+          "center_frame_index": 59
+        },
+        {
+          "trace_step_index": 40,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 40,
+          "end_frame_index": 79,
+          "center_frame_index": 60
+        },
+        {
+          "trace_step_index": 41,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 41,
+          "end_frame_index": 80,
+          "center_frame_index": 61
+        },
+        {
+          "trace_step_index": 42,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 42,
+          "end_frame_index": 81,
+          "center_frame_index": 62
+        },
+        {
+          "trace_step_index": 43,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 43,
+          "end_frame_index": 82,
+          "center_frame_index": 63
+        },
+        {
+          "trace_step_index": 44,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 44,
+          "end_frame_index": 83,
+          "center_frame_index": 64
+        },
+        {
+          "trace_step_index": 45,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 45,
+          "end_frame_index": 84,
+          "center_frame_index": 65
+        },
+        {
+          "trace_step_index": 46,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 46,
+          "end_frame_index": 85,
+          "center_frame_index": 66
+        },
+        {
+          "trace_step_index": 47,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 47,
+          "end_frame_index": 86,
+          "center_frame_index": 67
+        },
+        {
+          "trace_step_index": 48,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 48,
+          "end_frame_index": 87,
+          "center_frame_index": 68
+        },
+        {
+          "trace_step_index": 49,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 49,
+          "end_frame_index": 88,
+          "center_frame_index": 69
+        },
+        {
+          "trace_step_index": 50,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 50,
+          "end_frame_index": 89,
+          "center_frame_index": 70
+        },
+        {
+          "trace_step_index": 51,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 51,
+          "end_frame_index": 90,
+          "center_frame_index": 71
+        },
+        {
+          "trace_step_index": 52,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 52,
+          "end_frame_index": 91,
+          "center_frame_index": 72
+        },
+        {
+          "trace_step_index": 53,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 53,
+          "end_frame_index": 92,
+          "center_frame_index": 73
+        },
+        {
+          "trace_step_index": 54,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 54,
+          "end_frame_index": 93,
+          "center_frame_index": 74
+        },
+        {
+          "trace_step_index": 55,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 55,
+          "end_frame_index": 94,
+          "center_frame_index": 75
+        },
+        {
+          "trace_step_index": 56,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 56,
+          "end_frame_index": 95,
+          "center_frame_index": 76
+        },
+        {
+          "trace_step_index": 57,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 57,
+          "end_frame_index": 96,
+          "center_frame_index": 77
+        },
+        {
+          "trace_step_index": 58,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 58,
+          "end_frame_index": 97,
+          "center_frame_index": 78
+        },
+        {
+          "trace_step_index": 59,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 59,
+          "end_frame_index": 98,
+          "center_frame_index": 79
+        },
+        {
+          "trace_step_index": 60,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 60,
+          "end_frame_index": 99,
+          "center_frame_index": 80
+        },
+        {
+          "trace_step_index": 61,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 61,
+          "end_frame_index": 100,
+          "center_frame_index": 81
+        },
+        {
+          "trace_step_index": 62,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 62,
+          "end_frame_index": 101,
+          "center_frame_index": 82
+        },
+        {
+          "trace_step_index": 63,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 63,
+          "end_frame_index": 102,
+          "center_frame_index": 83
+        },
+        {
+          "trace_step_index": 64,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 64,
+          "end_frame_index": 103,
+          "center_frame_index": 84
+        },
+        {
+          "trace_step_index": 65,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 65,
+          "end_frame_index": 104,
+          "center_frame_index": 85
+        },
+        {
+          "trace_step_index": 66,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 66,
+          "end_frame_index": 105,
+          "center_frame_index": 86
+        },
+        {
+          "trace_step_index": 67,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 67,
+          "end_frame_index": 106,
+          "center_frame_index": 87
+        },
+        {
+          "trace_step_index": 68,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 68,
+          "end_frame_index": 107,
+          "center_frame_index": 88
+        },
+        {
+          "trace_step_index": 69,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 69,
+          "end_frame_index": 108,
+          "center_frame_index": 89
+        },
+        {
+          "trace_step_index": 70,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 70,
+          "end_frame_index": 109,
+          "center_frame_index": 90
+        },
+        {
+          "trace_step_index": 71,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 71,
+          "end_frame_index": 110,
+          "center_frame_index": 91
+        },
+        {
+          "trace_step_index": 72,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 72,
+          "end_frame_index": 111,
+          "center_frame_index": 92
+        },
+        {
+          "trace_step_index": 73,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 73,
+          "end_frame_index": 112,
+          "center_frame_index": 93
+        },
+        {
+          "trace_step_index": 74,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 74,
+          "end_frame_index": 113,
+          "center_frame_index": 94
+        },
+        {
+          "trace_step_index": 75,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 75,
+          "end_frame_index": 114,
+          "center_frame_index": 95
+        },
+        {
+          "trace_step_index": 76,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 76,
+          "end_frame_index": 115,
+          "center_frame_index": 96
+        },
+        {
+          "trace_step_index": 77,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 77,
+          "end_frame_index": 116,
+          "center_frame_index": 97
+        },
+        {
+          "trace_step_index": 78,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 78,
+          "end_frame_index": 117,
+          "center_frame_index": 98
+        },
+        {
+          "trace_step_index": 79,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 79,
+          "end_frame_index": 118,
+          "center_frame_index": 99
+        },
+        {
+          "trace_step_index": 80,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 80,
+          "end_frame_index": 119,
+          "center_frame_index": 100
+        },
+        {
+          "trace_step_index": 81,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 81,
+          "end_frame_index": 120,
+          "center_frame_index": 101
+        },
+        {
+          "trace_step_index": 82,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 82,
+          "end_frame_index": 121,
+          "center_frame_index": 102
+        },
+        {
+          "trace_step_index": 83,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 83,
+          "end_frame_index": 122,
+          "center_frame_index": 103
+        },
+        {
+          "trace_step_index": 84,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 84,
+          "end_frame_index": 123,
+          "center_frame_index": 104
+        },
+        {
+          "trace_step_index": 85,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 85,
+          "end_frame_index": 124,
+          "center_frame_index": 105
+        },
+        {
+          "trace_step_index": 86,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 86,
+          "end_frame_index": 125,
+          "center_frame_index": 106
+        },
+        {
+          "trace_step_index": 87,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 87,
+          "end_frame_index": 126,
+          "center_frame_index": 107
+        },
+        {
+          "trace_step_index": 88,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 88,
+          "end_frame_index": 127,
+          "center_frame_index": 108
+        },
+        {
+          "trace_step_index": 89,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 89,
+          "end_frame_index": 128,
+          "center_frame_index": 109
+        },
+        {
+          "trace_step_index": 90,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 90,
+          "end_frame_index": 129,
+          "center_frame_index": 110
+        },
+        {
+          "trace_step_index": 91,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 91,
+          "end_frame_index": 130,
+          "center_frame_index": 111
+        },
+        {
+          "trace_step_index": 92,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 92,
+          "end_frame_index": 131,
+          "center_frame_index": 112
+        },
+        {
+          "trace_step_index": 93,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 93,
+          "end_frame_index": 132,
+          "center_frame_index": 113
+        },
+        {
+          "trace_step_index": 94,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 94,
+          "end_frame_index": 133,
+          "center_frame_index": 114
+        },
+        {
+          "trace_step_index": 95,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 95,
+          "end_frame_index": 134,
+          "center_frame_index": 115
+        },
+        {
+          "trace_step_index": 96,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 96,
+          "end_frame_index": 135,
+          "center_frame_index": 116
+        },
+        {
+          "trace_step_index": 97,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 97,
+          "end_frame_index": 136,
+          "center_frame_index": 117
+        },
+        {
+          "trace_step_index": 98,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 98,
+          "end_frame_index": 137,
+          "center_frame_index": 118
+        },
+        {
+          "trace_step_index": 99,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 99,
+          "end_frame_index": 138,
+          "center_frame_index": 119
+        },
+        {
+          "trace_step_index": 100,
+          "trajectory_name": "kick_2.4-5.2s",
+          "trajectory_index": 1,
+          "start_frame_index": 100,
+          "end_frame_index": 139,
+          "center_frame_index": 120
+        }
+      ]
+    },
+    "squant_0.6-4.2s": {
+      "motion_id": 2,
+      "skill_name": "squant",
+      "trajectory_name": "squant_0.6-4.2s",
+      "trajectory_index": 2,
+      "source_num_frames": 180,
+      "source_duration_seconds": 3.58,
+      "num_trace_steps": 141,
+      "trace_stride_frames": 1,
+      "trace_step_seconds": 0.02,
+      "trace_entries": [
+        {
+          "trace_step_index": 0,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 0,
+          "end_frame_index": 39,
+          "center_frame_index": 20
+        },
+        {
+          "trace_step_index": 1,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 1,
+          "end_frame_index": 40,
+          "center_frame_index": 21
+        },
+        {
+          "trace_step_index": 2,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 2,
+          "end_frame_index": 41,
+          "center_frame_index": 22
+        },
+        {
+          "trace_step_index": 3,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 3,
+          "end_frame_index": 42,
+          "center_frame_index": 23
+        },
+        {
+          "trace_step_index": 4,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 4,
+          "end_frame_index": 43,
+          "center_frame_index": 24
+        },
+        {
+          "trace_step_index": 5,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 5,
+          "end_frame_index": 44,
+          "center_frame_index": 25
+        },
+        {
+          "trace_step_index": 6,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 6,
+          "end_frame_index": 45,
+          "center_frame_index": 26
+        },
+        {
+          "trace_step_index": 7,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 7,
+          "end_frame_index": 46,
+          "center_frame_index": 27
+        },
+        {
+          "trace_step_index": 8,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 8,
+          "end_frame_index": 47,
+          "center_frame_index": 28
+        },
+        {
+          "trace_step_index": 9,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 9,
+          "end_frame_index": 48,
+          "center_frame_index": 29
+        },
+        {
+          "trace_step_index": 10,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 10,
+          "end_frame_index": 49,
+          "center_frame_index": 30
+        },
+        {
+          "trace_step_index": 11,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 11,
+          "end_frame_index": 50,
+          "center_frame_index": 31
+        },
+        {
+          "trace_step_index": 12,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 12,
+          "end_frame_index": 51,
+          "center_frame_index": 32
+        },
+        {
+          "trace_step_index": 13,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 13,
+          "end_frame_index": 52,
+          "center_frame_index": 33
+        },
+        {
+          "trace_step_index": 14,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 14,
+          "end_frame_index": 53,
+          "center_frame_index": 34
+        },
+        {
+          "trace_step_index": 15,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 15,
+          "end_frame_index": 54,
+          "center_frame_index": 35
+        },
+        {
+          "trace_step_index": 16,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 16,
+          "end_frame_index": 55,
+          "center_frame_index": 36
+        },
+        {
+          "trace_step_index": 17,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 17,
+          "end_frame_index": 56,
+          "center_frame_index": 37
+        },
+        {
+          "trace_step_index": 18,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 18,
+          "end_frame_index": 57,
+          "center_frame_index": 38
+        },
+        {
+          "trace_step_index": 19,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 19,
+          "end_frame_index": 58,
+          "center_frame_index": 39
+        },
+        {
+          "trace_step_index": 20,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 20,
+          "end_frame_index": 59,
+          "center_frame_index": 40
+        },
+        {
+          "trace_step_index": 21,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 21,
+          "end_frame_index": 60,
+          "center_frame_index": 41
+        },
+        {
+          "trace_step_index": 22,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 22,
+          "end_frame_index": 61,
+          "center_frame_index": 42
+        },
+        {
+          "trace_step_index": 23,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 23,
+          "end_frame_index": 62,
+          "center_frame_index": 43
+        },
+        {
+          "trace_step_index": 24,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 24,
+          "end_frame_index": 63,
+          "center_frame_index": 44
+        },
+        {
+          "trace_step_index": 25,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 25,
+          "end_frame_index": 64,
+          "center_frame_index": 45
+        },
+        {
+          "trace_step_index": 26,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 26,
+          "end_frame_index": 65,
+          "center_frame_index": 46
+        },
+        {
+          "trace_step_index": 27,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 27,
+          "end_frame_index": 66,
+          "center_frame_index": 47
+        },
+        {
+          "trace_step_index": 28,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 28,
+          "end_frame_index": 67,
+          "center_frame_index": 48
+        },
+        {
+          "trace_step_index": 29,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 29,
+          "end_frame_index": 68,
+          "center_frame_index": 49
+        },
+        {
+          "trace_step_index": 30,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 30,
+          "end_frame_index": 69,
+          "center_frame_index": 50
+        },
+        {
+          "trace_step_index": 31,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 31,
+          "end_frame_index": 70,
+          "center_frame_index": 51
+        },
+        {
+          "trace_step_index": 32,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 32,
+          "end_frame_index": 71,
+          "center_frame_index": 52
+        },
+        {
+          "trace_step_index": 33,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 33,
+          "end_frame_index": 72,
+          "center_frame_index": 53
+        },
+        {
+          "trace_step_index": 34,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 34,
+          "end_frame_index": 73,
+          "center_frame_index": 54
+        },
+        {
+          "trace_step_index": 35,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 35,
+          "end_frame_index": 74,
+          "center_frame_index": 55
+        },
+        {
+          "trace_step_index": 36,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 36,
+          "end_frame_index": 75,
+          "center_frame_index": 56
+        },
+        {
+          "trace_step_index": 37,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 37,
+          "end_frame_index": 76,
+          "center_frame_index": 57
+        },
+        {
+          "trace_step_index": 38,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 38,
+          "end_frame_index": 77,
+          "center_frame_index": 58
+        },
+        {
+          "trace_step_index": 39,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 39,
+          "end_frame_index": 78,
+          "center_frame_index": 59
+        },
+        {
+          "trace_step_index": 40,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 40,
+          "end_frame_index": 79,
+          "center_frame_index": 60
+        },
+        {
+          "trace_step_index": 41,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 41,
+          "end_frame_index": 80,
+          "center_frame_index": 61
+        },
+        {
+          "trace_step_index": 42,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 42,
+          "end_frame_index": 81,
+          "center_frame_index": 62
+        },
+        {
+          "trace_step_index": 43,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 43,
+          "end_frame_index": 82,
+          "center_frame_index": 63
+        },
+        {
+          "trace_step_index": 44,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 44,
+          "end_frame_index": 83,
+          "center_frame_index": 64
+        },
+        {
+          "trace_step_index": 45,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 45,
+          "end_frame_index": 84,
+          "center_frame_index": 65
+        },
+        {
+          "trace_step_index": 46,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 46,
+          "end_frame_index": 85,
+          "center_frame_index": 66
+        },
+        {
+          "trace_step_index": 47,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 47,
+          "end_frame_index": 86,
+          "center_frame_index": 67
+        },
+        {
+          "trace_step_index": 48,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 48,
+          "end_frame_index": 87,
+          "center_frame_index": 68
+        },
+        {
+          "trace_step_index": 49,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 49,
+          "end_frame_index": 88,
+          "center_frame_index": 69
+        },
+        {
+          "trace_step_index": 50,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 50,
+          "end_frame_index": 89,
+          "center_frame_index": 70
+        },
+        {
+          "trace_step_index": 51,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 51,
+          "end_frame_index": 90,
+          "center_frame_index": 71
+        },
+        {
+          "trace_step_index": 52,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 52,
+          "end_frame_index": 91,
+          "center_frame_index": 72
+        },
+        {
+          "trace_step_index": 53,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 53,
+          "end_frame_index": 92,
+          "center_frame_index": 73
+        },
+        {
+          "trace_step_index": 54,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 54,
+          "end_frame_index": 93,
+          "center_frame_index": 74
+        },
+        {
+          "trace_step_index": 55,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 55,
+          "end_frame_index": 94,
+          "center_frame_index": 75
+        },
+        {
+          "trace_step_index": 56,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 56,
+          "end_frame_index": 95,
+          "center_frame_index": 76
+        },
+        {
+          "trace_step_index": 57,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 57,
+          "end_frame_index": 96,
+          "center_frame_index": 77
+        },
+        {
+          "trace_step_index": 58,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 58,
+          "end_frame_index": 97,
+          "center_frame_index": 78
+        },
+        {
+          "trace_step_index": 59,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 59,
+          "end_frame_index": 98,
+          "center_frame_index": 79
+        },
+        {
+          "trace_step_index": 60,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 60,
+          "end_frame_index": 99,
+          "center_frame_index": 80
+        },
+        {
+          "trace_step_index": 61,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 61,
+          "end_frame_index": 100,
+          "center_frame_index": 81
+        },
+        {
+          "trace_step_index": 62,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 62,
+          "end_frame_index": 101,
+          "center_frame_index": 82
+        },
+        {
+          "trace_step_index": 63,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 63,
+          "end_frame_index": 102,
+          "center_frame_index": 83
+        },
+        {
+          "trace_step_index": 64,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 64,
+          "end_frame_index": 103,
+          "center_frame_index": 84
+        },
+        {
+          "trace_step_index": 65,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 65,
+          "end_frame_index": 104,
+          "center_frame_index": 85
+        },
+        {
+          "trace_step_index": 66,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 66,
+          "end_frame_index": 105,
+          "center_frame_index": 86
+        },
+        {
+          "trace_step_index": 67,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 67,
+          "end_frame_index": 106,
+          "center_frame_index": 87
+        },
+        {
+          "trace_step_index": 68,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 68,
+          "end_frame_index": 107,
+          "center_frame_index": 88
+        },
+        {
+          "trace_step_index": 69,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 69,
+          "end_frame_index": 108,
+          "center_frame_index": 89
+        },
+        {
+          "trace_step_index": 70,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 70,
+          "end_frame_index": 109,
+          "center_frame_index": 90
+        },
+        {
+          "trace_step_index": 71,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 71,
+          "end_frame_index": 110,
+          "center_frame_index": 91
+        },
+        {
+          "trace_step_index": 72,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 72,
+          "end_frame_index": 111,
+          "center_frame_index": 92
+        },
+        {
+          "trace_step_index": 73,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 73,
+          "end_frame_index": 112,
+          "center_frame_index": 93
+        },
+        {
+          "trace_step_index": 74,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 74,
+          "end_frame_index": 113,
+          "center_frame_index": 94
+        },
+        {
+          "trace_step_index": 75,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 75,
+          "end_frame_index": 114,
+          "center_frame_index": 95
+        },
+        {
+          "trace_step_index": 76,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 76,
+          "end_frame_index": 115,
+          "center_frame_index": 96
+        },
+        {
+          "trace_step_index": 77,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 77,
+          "end_frame_index": 116,
+          "center_frame_index": 97
+        },
+        {
+          "trace_step_index": 78,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 78,
+          "end_frame_index": 117,
+          "center_frame_index": 98
+        },
+        {
+          "trace_step_index": 79,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 79,
+          "end_frame_index": 118,
+          "center_frame_index": 99
+        },
+        {
+          "trace_step_index": 80,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 80,
+          "end_frame_index": 119,
+          "center_frame_index": 100
+        },
+        {
+          "trace_step_index": 81,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 81,
+          "end_frame_index": 120,
+          "center_frame_index": 101
+        },
+        {
+          "trace_step_index": 82,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 82,
+          "end_frame_index": 121,
+          "center_frame_index": 102
+        },
+        {
+          "trace_step_index": 83,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 83,
+          "end_frame_index": 122,
+          "center_frame_index": 103
+        },
+        {
+          "trace_step_index": 84,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 84,
+          "end_frame_index": 123,
+          "center_frame_index": 104
+        },
+        {
+          "trace_step_index": 85,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 85,
+          "end_frame_index": 124,
+          "center_frame_index": 105
+        },
+        {
+          "trace_step_index": 86,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 86,
+          "end_frame_index": 125,
+          "center_frame_index": 106
+        },
+        {
+          "trace_step_index": 87,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 87,
+          "end_frame_index": 126,
+          "center_frame_index": 107
+        },
+        {
+          "trace_step_index": 88,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 88,
+          "end_frame_index": 127,
+          "center_frame_index": 108
+        },
+        {
+          "trace_step_index": 89,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 89,
+          "end_frame_index": 128,
+          "center_frame_index": 109
+        },
+        {
+          "trace_step_index": 90,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 90,
+          "end_frame_index": 129,
+          "center_frame_index": 110
+        },
+        {
+          "trace_step_index": 91,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 91,
+          "end_frame_index": 130,
+          "center_frame_index": 111
+        },
+        {
+          "trace_step_index": 92,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 92,
+          "end_frame_index": 131,
+          "center_frame_index": 112
+        },
+        {
+          "trace_step_index": 93,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 93,
+          "end_frame_index": 132,
+          "center_frame_index": 113
+        },
+        {
+          "trace_step_index": 94,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 94,
+          "end_frame_index": 133,
+          "center_frame_index": 114
+        },
+        {
+          "trace_step_index": 95,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 95,
+          "end_frame_index": 134,
+          "center_frame_index": 115
+        },
+        {
+          "trace_step_index": 96,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 96,
+          "end_frame_index": 135,
+          "center_frame_index": 116
+        },
+        {
+          "trace_step_index": 97,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 97,
+          "end_frame_index": 136,
+          "center_frame_index": 117
+        },
+        {
+          "trace_step_index": 98,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 98,
+          "end_frame_index": 137,
+          "center_frame_index": 118
+        },
+        {
+          "trace_step_index": 99,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 99,
+          "end_frame_index": 138,
+          "center_frame_index": 119
+        },
+        {
+          "trace_step_index": 100,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 100,
+          "end_frame_index": 139,
+          "center_frame_index": 120
+        },
+        {
+          "trace_step_index": 101,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 101,
+          "end_frame_index": 140,
+          "center_frame_index": 121
+        },
+        {
+          "trace_step_index": 102,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 102,
+          "end_frame_index": 141,
+          "center_frame_index": 122
+        },
+        {
+          "trace_step_index": 103,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 103,
+          "end_frame_index": 142,
+          "center_frame_index": 123
+        },
+        {
+          "trace_step_index": 104,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 104,
+          "end_frame_index": 143,
+          "center_frame_index": 124
+        },
+        {
+          "trace_step_index": 105,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 105,
+          "end_frame_index": 144,
+          "center_frame_index": 125
+        },
+        {
+          "trace_step_index": 106,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 106,
+          "end_frame_index": 145,
+          "center_frame_index": 126
+        },
+        {
+          "trace_step_index": 107,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 107,
+          "end_frame_index": 146,
+          "center_frame_index": 127
+        },
+        {
+          "trace_step_index": 108,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 108,
+          "end_frame_index": 147,
+          "center_frame_index": 128
+        },
+        {
+          "trace_step_index": 109,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 109,
+          "end_frame_index": 148,
+          "center_frame_index": 129
+        },
+        {
+          "trace_step_index": 110,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 110,
+          "end_frame_index": 149,
+          "center_frame_index": 130
+        },
+        {
+          "trace_step_index": 111,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 111,
+          "end_frame_index": 150,
+          "center_frame_index": 131
+        },
+        {
+          "trace_step_index": 112,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 112,
+          "end_frame_index": 151,
+          "center_frame_index": 132
+        },
+        {
+          "trace_step_index": 113,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 113,
+          "end_frame_index": 152,
+          "center_frame_index": 133
+        },
+        {
+          "trace_step_index": 114,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 114,
+          "end_frame_index": 153,
+          "center_frame_index": 134
+        },
+        {
+          "trace_step_index": 115,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 115,
+          "end_frame_index": 154,
+          "center_frame_index": 135
+        },
+        {
+          "trace_step_index": 116,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 116,
+          "end_frame_index": 155,
+          "center_frame_index": 136
+        },
+        {
+          "trace_step_index": 117,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 117,
+          "end_frame_index": 156,
+          "center_frame_index": 137
+        },
+        {
+          "trace_step_index": 118,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 118,
+          "end_frame_index": 157,
+          "center_frame_index": 138
+        },
+        {
+          "trace_step_index": 119,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 119,
+          "end_frame_index": 158,
+          "center_frame_index": 139
+        },
+        {
+          "trace_step_index": 120,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 120,
+          "end_frame_index": 159,
+          "center_frame_index": 140
+        },
+        {
+          "trace_step_index": 121,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 121,
+          "end_frame_index": 160,
+          "center_frame_index": 141
+        },
+        {
+          "trace_step_index": 122,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 122,
+          "end_frame_index": 161,
+          "center_frame_index": 142
+        },
+        {
+          "trace_step_index": 123,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 123,
+          "end_frame_index": 162,
+          "center_frame_index": 143
+        },
+        {
+          "trace_step_index": 124,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 124,
+          "end_frame_index": 163,
+          "center_frame_index": 144
+        },
+        {
+          "trace_step_index": 125,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 125,
+          "end_frame_index": 164,
+          "center_frame_index": 145
+        },
+        {
+          "trace_step_index": 126,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 126,
+          "end_frame_index": 165,
+          "center_frame_index": 146
+        },
+        {
+          "trace_step_index": 127,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 127,
+          "end_frame_index": 166,
+          "center_frame_index": 147
+        },
+        {
+          "trace_step_index": 128,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 128,
+          "end_frame_index": 167,
+          "center_frame_index": 148
+        },
+        {
+          "trace_step_index": 129,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 129,
+          "end_frame_index": 168,
+          "center_frame_index": 149
+        },
+        {
+          "trace_step_index": 130,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 130,
+          "end_frame_index": 169,
+          "center_frame_index": 150
+        },
+        {
+          "trace_step_index": 131,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 131,
+          "end_frame_index": 170,
+          "center_frame_index": 151
+        },
+        {
+          "trace_step_index": 132,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 132,
+          "end_frame_index": 171,
+          "center_frame_index": 152
+        },
+        {
+          "trace_step_index": 133,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 133,
+          "end_frame_index": 172,
+          "center_frame_index": 153
+        },
+        {
+          "trace_step_index": 134,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 134,
+          "end_frame_index": 173,
+          "center_frame_index": 154
+        },
+        {
+          "trace_step_index": 135,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 135,
+          "end_frame_index": 174,
+          "center_frame_index": 155
+        },
+        {
+          "trace_step_index": 136,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 136,
+          "end_frame_index": 175,
+          "center_frame_index": 156
+        },
+        {
+          "trace_step_index": 137,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 137,
+          "end_frame_index": 176,
+          "center_frame_index": 157
+        },
+        {
+          "trace_step_index": 138,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 138,
+          "end_frame_index": 177,
+          "center_frame_index": 158
+        },
+        {
+          "trace_step_index": 139,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 139,
+          "end_frame_index": 178,
+          "center_frame_index": 159
+        },
+        {
+          "trace_step_index": 140,
+          "trajectory_name": "squant_0.6-4.2s",
+          "trajectory_index": 2,
+          "start_frame_index": 140,
+          "end_frame_index": 179,
+          "center_frame_index": 160
+        }
+      ]
+    }
+  }
+}

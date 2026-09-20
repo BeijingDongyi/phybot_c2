@@ -1,7 +1,7 @@
 ase_control_mode: h1_trace
 use_hlc_residual: false
 hlc_manifest_path: ''
-hlc_policy_path: ../RL_deploy_ase/model/policy.pt
+hlc_policy_path: ../exported_hlc/policy.pt
 llc_policy_path: ../exported_hlc/llc_policy.pt
 ase_policy_path: ../exported_h0/policy_kick_22000.pt
 skill_centers_path: ../exported_h0/skill_centers_kick_22000.json
@@ -11,16 +11,16 @@ default_ase_profile: supernice
 ase_profiles:
   supernice:
     profile_id: 0
-    h1_policy_path: ../config/h1_policy.pt
-    motion_traces_path: ../config/motion_traces.json
+    h1_policy_path: ../exported_h1/0708/h1_policy.pt
+    motion_traces_path: ../exported_h1/0708/motion_traces.json
   fast_kick:
     profile_id: 1
-    h1_policy_path: ../config/h1_policy.pt
-    motion_traces_path: ../config/motion_traces.json
+    h1_policy_path: ../exported_h1/0713_fast_kick/h1_policy.pt
+    motion_traces_path: ../exported_h1/0713_fast_kick/motion_traces.json
 
 # Legacy single-profile fallback (used by joystick implementations without profile support).
-h1_policy_path: ../config/h1_policy.pt
-motion_traces_path: ../config/motion_traces.json
+h1_policy_path: ../exported_h1/0709_supernice/h1_policy.pt
+motion_traces_path: ../exported_h1/0709_supernice/motion_traces.json
 
 h1_trace_loop: false
 h1_phase_increment: 1

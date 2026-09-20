@@ -1,0 +1,129 @@
+{
+  "task": "phybot_walk",
+  "checkpoint": "/home/user/Downloads/Phybot_Lab-last_ase-add-0429/logs/phybot_walk_ase_add/2026-06-01_17-11-55/model_49999.pt",
+  "clip_seconds": 1.0,
+  "clip_frames": 50,
+  "latent_dim": 32,
+  "num_motions": 4,
+  "motion_order": [
+    "hook_20-120",
+    "punch_30-160",
+    "uppercat_280-380",
+    "stand_521"
+  ],
+  "motion_to_id": {
+    "hook_20-120": 0,
+    "punch_30-160": 1,
+    "uppercat_280-380": 2,
+    "stand_521": 3
+  },
+  "policy_path": "/home/user/Downloads/Phybot_Lab-last_ase-add-0429/logs/phybot_walk_ase_add/2026-06-01_17-11-55/exported_h1/h1_policy.pt",
+  "trace_stride_frames": 1,
+  "trace_step_seconds": 0.02,
+  "motions": {
+    "hook_20-120": {
+      "motion_id": 0,
+      "skill_name": "hook",
+      "trajectory_name": "hook_20-120",
+      "trajectory_index": 0,
+      "source_num_frames": 101,
+      "source_duration_seconds": 2.0,
+      "source_num_trace_steps": 52,
+      "num_trace_steps": 1,
+      "selected_trace_indices": [
+        34
+      ],
+      "manual_prototype_fallback_full_trace": false,
+      "trace_stride_frames": 1,
+      "trace_step_seconds": 0.02,
+      "trace_entries": [
+        {
+          "trace_step_index": 33,
+          "trajectory_name": "hook_20-120",
+          "trajectory_index": 0,
+          "start_frame_index": 33,
+          "end_frame_index": 82,
+          "center_frame_index": 58
+        }
+      ]
+    },
+    "punch_30-160": {
+      "motion_id": 1,
+      "skill_name": "punch",
+      "trajectory_name": "punch_30-160",
+      "trajectory_index": 1,
+      "source_num_frames": 131,
+      "source_duration_seconds": 2.6,
+      "source_num_trace_steps": 82,
+      "num_trace_steps": 1,
+      "selected_trace_indices": [
+        20
+      ],
+      "manual_prototype_fallback_full_trace": false,
+      "trace_stride_frames": 1,
+      "trace_step_seconds": 0.02,
+      "trace_entries": [
+        {
+          "trace_step_index": 19,
+          "trajectory_name": "punch_30-160",
+          "trajectory_index": 1,
+          "start_frame_index": 19,
+          "end_frame_index": 68,
+          "center_frame_index": 44
+        }
+      ]
+    },
+    "uppercat_280-380": {
+      "motion_id": 2,
+      "skill_name": "uppercat",
+      "trajectory_name": "uppercat_280-380",
+      "trajectory_index": 2,
+      "source_num_frames": 101,
+      "source_duration_seconds": 2.0,
+      "source_num_trace_steps": 52,
+      "num_trace_steps": 1,
+      "selected_trace_indices": [
+        1
+      ],
+      "manual_prototype_fallback_full_trace": false,
+      "trace_stride_frames": 1,
+      "trace_step_seconds": 0.02,
+      "trace_entries": [
+        {
+          "trace_step_index": 0,
+          "trajectory_name": "uppercat_280-380",
+          "trajectory_index": 2,
+          "start_frame_index": 0,
+          "end_frame_index": 49,
+          "center_frame_index": 25
+        }
+      ]
+    },
+    "stand_521": {
+      "motion_id": 3,
+      "skill_name": "stand",
+      "trajectory_name": "stand_521",
+      "trajectory_index": 3,
+      "source_num_frames": 120,
+      "source_duration_seconds": 2.38,
+      "source_num_trace_steps": 71,
+      "num_trace_steps": 1,
+      "selected_trace_indices": [
+        21
+      ],
+      "manual_prototype_fallback_full_trace": false,
+      "trace_stride_frames": 1,
+      "trace_step_seconds": 0.02,
+      "trace_entries": [
+        {
+          "trace_step_index": 20,
+          "trajectory_name": "stand_521",
+          "trajectory_index": 3,
+          "start_frame_index": 20,
+          "end_frame_index": 69,
+          "center_frame_index": 45
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,80 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using IMU_TYPE: IMU
+-- Found Torch: /package/ThirdParty/libtorch/lib/libtorch.so  
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Checking for module 'glib-2.0'
+--   Found glib-2.0, version 2.64.6
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /validation/customer/IMU/realrobot_mini
+Scanning dependencies of target led_test
+Scanning dependencies of target set_one_zero
+Scanning dependencies of target set_zero
+Scanning dependencies of target led_off_test
+[  2%] Building CXX object CMakeFiles/led_test.dir/RobotStart/test/led_test.cpp.o
+[  5%] Building CXX object CMakeFiles/led_off_test.dir/RobotStart/test/led_off_test.cpp.o
+[  8%] Building CXX object CMakeFiles/set_one_zero.dir/RobotStart/test/set_one_zero.cpp.o
+[ 10%] Building CXX object CMakeFiles/set_zero.dir/RobotStart/realrobot/set_zero_mini.cpp.o
+[ 13%] Building CXX object CMakeFiles/led_off_test.dir/ZeroState/src/ZeroState.cpp.o
+[ 16%] Building CXX object CMakeFiles/led_test.dir/ZeroState/src/ZeroState.cpp.o
+[ 18%] Building CXX object CMakeFiles/set_zero.dir/ZeroState/src/ZeroState.cpp.o
+[ 21%] Building CXX object CMakeFiles/set_one_zero.dir/ZeroState/src/ZeroState.cpp.o
+[ 24%] Building CXX object CMakeFiles/led_off_test.dir/device/IMU/IMUReader.cpp.o
+[ 27%] Building CXX object CMakeFiles/led_test.dir/device/IMU/IMUReader.cpp.o
+[ 29%] Building CXX object CMakeFiles/set_zero.dir/device/IMU/IMUReader.cpp.o
+[ 32%] Building CXX object CMakeFiles/set_one_zero.dir/device/IMU/IMUReader.cpp.o
+[ 35%] Building C object CMakeFiles/led_off_test.dir/device/IMU/serial_port.c.o
+[ 37%] Building C object CMakeFiles/led_off_test.dir/device/IMU/log.c.o
+[ 40%] Linking CXX executable led_off_test
+[ 43%] Building C object CMakeFiles/led_test.dir/device/IMU/serial_port.c.o
+[ 45%] Building C object CMakeFiles/led_test.dir/device/IMU/log.c.o
+[ 48%] Linking CXX executable led_test
+[ 48%] Built target led_off_test
+Scanning dependencies of target led_homing_test
+[ 51%] Building CXX object CMakeFiles/led_homing_test.dir/RobotStart/test/led_homing_test.cpp.o
+[ 51%] Built target led_test
+Scanning dependencies of target main
+[ 54%] Building CXX object CMakeFiles/main.dir/RobotStart/realrobot/run_mini.cpp.o
+[ 56%] Building C object CMakeFiles/set_zero.dir/device/IMU/serial_port.c.o
+[ 59%] Building C object CMakeFiles/set_zero.dir/device/IMU/log.c.o
+[ 62%] Building C object CMakeFiles/set_one_zero.dir/device/IMU/serial_port.c.o
+[ 64%] Linking CXX executable set_zero
+[ 67%] Building C object CMakeFiles/set_one_zero.dir/device/IMU/log.c.o
+[ 70%] Linking CXX executable set_one_zero
+[ 72%] Building CXX object CMakeFiles/led_homing_test.dir/ZeroState/src/ZeroState.cpp.o
+[ 72%] Built target set_zero
+[ 75%] Building CXX object CMakeFiles/led_homing_test.dir/device/IMU/IMUReader.cpp.o
+[ 75%] Built target set_one_zero
+[ 78%] Building C object CMakeFiles/led_homing_test.dir/device/IMU/serial_port.c.o
+[ 81%] Building C object CMakeFiles/led_homing_test.dir/device/IMU/log.c.o
+[ 83%] Building CXX object CMakeFiles/main.dir/ZeroState/src/ZeroState.cpp.o
+[ 86%] Building CXX object CMakeFiles/main.dir/device/IMU/IMUReader.cpp.o
+[ 89%] Building C object CMakeFiles/main.dir/device/IMU/serial_port.c.o
+[ 91%] Linking CXX executable led_homing_test
+[ 94%] Building C object CMakeFiles/main.dir/device/IMU/log.c.o
+[ 97%] Building CXX object CMakeFiles/main.dir/StateMachine/src/statemachinemanager.cpp.o
+[ 97%] Built target led_homing_test
+[100%] Linking CXX executable main
+[100%] Built target main

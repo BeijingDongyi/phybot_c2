@@ -1,0 +1,96 @@
+cmake_minimum_required(VERSION 3.16)
+project(phybot_software LANGUAGES C CXX)
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+if(NOT CMAKE_SYSTEM_NAME STREQUAL "Linux" OR NOT CMAKE_SYSTEM_PROCESSOR MATCHES "^(x86_64|amd64|AMD64)$")
+    message(FATAL_ERROR "This package requires x86-64 Linux.")
+endif()
+set(WHICH_ENV realrobot_mini CACHE STRING "realrobot_mini, mujoco_sim_mini, Robot_test")
+set(IMU_TYPE Hipnuc CACHE STRING "Hipnuc (old) or IMU (new)")
+set_property(CACHE IMU_TYPE PROPERTY STRINGS Hipnuc IMU)
+if(IMU_TYPE STREQUAL "Hipnuc")
+    add_compile_definitions(DEVICE_IMU_HIPNUC)
+    set(imu_sources device/Imu_hipnuc/linux/HipnucReader.cpp
+        device/Imu_hipnuc/linux/serial_port.c device/Imu_hipnuc/linux/log.c
+        device/Imu_hipnuc/linux/fw_downloader/hex2bin.c
+        device/Imu_hipnuc/linux/fw_downloader/kboot.c
+        device/Imu_hipnuc/lib/example_data.c device/Imu_hipnuc/lib/hipnuc_dec.c
+        device/Imu_hipnuc/lib/nmea_dec.c)
+elseif(IMU_TYPE STREQUAL "IMU")
+    add_compile_definitions(DEVICE_IMU_CUSTOM)
+    set(imu_sources device/IMU/IMUReader.cpp device/IMU/serial_port.c device/IMU/log.c)
+else()
+    message(FATAL_ERROR "IMU_TYPE must be Hipnuc or IMU")
+endif()
+message(STATUS "Using IMU_TYPE: ${IMU_TYPE}")
+list(PREPEND CMAKE_PREFIX_PATH "${PROJECT_SOURCE_DIR}/ThirdParty/libtorch")
+find_package(Torch REQUIRED)
+find_package(Threads REQUIRED)
+add_compile_options(-O0 -g -Wno-return-type)
+include_directories("${PROJECT_SOURCE_DIR}" ThirdParty ThirdParty/eigen3
+    ThirdParty/yaml/include ThirdParty/spdlog/include ThirdParty/boost/include
+    ThirdParty/mujoco ThirdParty/glfw ThirdParty/gl/include
+    lcm_server/lcm/release/include lcm_server/include MujocoInterface/include
+    device/IMU device/Imu_hipnuc/linux device/Imu_hipnuc/linux/fw_downloader
+    device/Imu_hipnuc/lib)
+file(GLOB module_includes LIST_DIRECTORIES true "${PROJECT_SOURCE_DIR}/*/include")
+include_directories(${module_includes})
+
+# Relative RPATH applies to indirect dependencies as well as direct libraries.
+file(RELATIVE_PATH root_from_build "${CMAKE_BINARY_DIR}" "${PROJECT_SOURCE_DIR}")
+set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH FALSE)
+foreach(root "$ORIGIN/${root_from_build}" "$ORIGIN/.." "$ORIGIN/../../..")
+    foreach(dir ThirdParty/libtorch/lib ThirdParty/yaml/lib ThirdParty/mujoco/lib
+                ThirdParty/glfw/lib MotorList/lib lcm_server/lib)
+        list(APPEND CMAKE_INSTALL_RPATH "${root}/${dir}")
+    endforeach()
+endforeach()
+add_link_options(-Wl,--disable-new-dtags)
+
+foreach(name core motor mujoco)
+    set(archive "${PROJECT_SOURCE_DIR}/lib/${IMU_TYPE}/libphybot_${name}.a")
+    if(NOT EXISTS "${archive}")
+        message(FATAL_ERROR "Missing packaged library: ${archive}")
+    endif()
+    add_library(phybot_${name} STATIC IMPORTED)
+    set_target_properties(phybot_${name} PROPERTIES IMPORTED_LOCATION "${archive}")
+endforeach()
+set(private_libs -Wl,--start-group phybot_core phybot_motor phybot_mujoco -Wl,--end-group)
+set(yaml_lib "${PROJECT_SOURCE_DIR}/ThirdParty/yaml/lib/libyaml-cpp.so")
+set(motor_lib "${PROJECT_SOURCE_DIR}/MotorList/lib/libMotorDrive.so")
+set(lcm_lib "${PROJECT_SOURCE_DIR}/lcm_server/lib/liblcm.so")
+file(GLOB state_sources CONFIGURE_DEPENDS StateMachine/src/*.cpp)
+file(GLOB zero_sources CONFIGURE_DEPENDS ZeroState/src/*.cpp)
+
+function(robot_target name entry)
+    add_executable(${name} "${entry}" ${zero_sources} ${imu_sources})
+    target_link_libraries(${name} PRIVATE ${private_libs} ${TORCH_LIBRARIES}
+        ${yaml_lib} ${motor_lib} Threads::Threads)
+endfunction()
+function(main_target entry)
+    robot_target(main "${entry}")
+    target_sources(main PRIVATE ${state_sources})
+    target_link_libraries(main PRIVATE ${lcm_lib})
+endfunction()
+if(WHICH_ENV STREQUAL "realrobot_mini")
+    main_target(RobotStart/realrobot/run_mini.cpp)
+    robot_target(set_zero RobotStart/realrobot/set_zero_mini.cpp)
+    robot_target(set_one_zero RobotStart/test/set_one_zero.cpp)
+    foreach(name led_test led_off_test led_homing_test)
+        robot_target(${name} "RobotStart/test/${name}.cpp")
+    endforeach()
+elseif(WHICH_ENV STREQUAL "mujoco_sim_mini")
+    main_target(RobotStart/mujoco_sim/main.cc)
+    target_link_libraries(main PRIVATE
+        "${PROJECT_SOURCE_DIR}/ThirdParty/mujoco/lib/libmujoco.so"
+        "${PROJECT_SOURCE_DIR}/ThirdParty/glfw/lib/libglfw3.so" ${CMAKE_DL_LIBS})
+elseif(WHICH_ENV STREQUAL "Robot_test")
+    foreach(name imu_test read_pos set_one_Enable set_one_zero)
+        robot_target(${name} "RobotStart/test/${name}.cpp")
+    endforeach()
+else()
+    message(FATAL_ERROR "Supported WHICH_ENV: realrobot_mini, mujoco_sim_mini, Robot_test")
+endif()
