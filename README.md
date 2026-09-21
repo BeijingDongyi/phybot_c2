@@ -1,337 +1,282 @@
-# PHYBOT_C2_UBUNTU20_1.0
+# PHYBOT C2 客户使用说明
 
-Phybot C2 客户交付软件包。
+适用环境：Ubuntu 20.04 x86_64。
 
-## 1. 软件信息
-
-- 软件包名称：PHYBOT_C2_UBUNTU20_1.0
-- 交付目标：ubuntu20.04（ubuntu20.04 表示 Ubuntu 20.04 x86_64）
-- 运行环境：all
-- 手柄类型：Model_airplane
-- 保留源码包：device,RobotStart,ZeroState,RL_deploy_cpg,StateMachine
-- 保留头文件包：LowPassFilter,Model_airplane_Joystick,MotorList,MujocoInterface,DataPackage,LED
-- 架构：Linux x86_64
-- 编译类型：Release
-- 交付内容：源码、头文件、CMake 工程、运行时动态库、配置文件、模型文件、数据文件和编译/清理脚本
-
-本软件包是需要在目标机上编译的 SDK 包，不预先交付 `bin/` 可执行文件。包含编译所需的 C/C++ 源文件、头文件、CMake 工程文件和 ThirdParty 依赖。
-
-## 2. 目录说明
-
-```text
-PHYBOT_C2_UBUNTU20_1.0/
-├── CMakeLists.txt          # CMake 工程入口
-├── build/                  # 运行 autobuild.sh 后生成
-├── lib/                    # 程序运行所需的动态库
-├── ThirdParty/             # 编译和运行依赖
-├── StateMachine/           # 状态机源码
-├── RobotStart/             # 真机、仿真和测试入口源码
-├── RL_deploy_*/            # RL 配置、模型和运行数据
-├── MotorList/config/       # 电机配置
-├── device/config/          # IMU 等设备配置
-├── ZeroState/config/       # 归零配置
-├── DataPackage/config/     # 数据包配置
-├── RobotModel/phybot_c2/   # MuJoCo XML、URDF 和 STL 模型资源
-├── autobuild.sh            # 非交互编译入口
-├── autoclean.sh            # 清理 build 目录
-├── PHYBOT_C2_UBUNTU20_1.0.version # 软件版本标识
-├── README.md               # 本说明文件
-└── run.sh                  # 推荐启动脚本
-```
-
-## 3. 运行方式
-
-请在目标 Linux 系统上解压整个目录，首先执行编译脚本：
+## 编译
 
 ```bash
-cd PHYBOT_C2_UBUNTU20_1.0
-./install_dependencies.sh  # Ubuntu 20.04 首次使用时安装编译和图形依赖
-./autobuild.sh              # 交互选择环境和新/旧 IMU
+./autobuild.sh realrobot_mini
+./autobuild.sh mujoco_sim_mini
+./autobuild.sh test
 ```
 
-`autobuild.sh` 不传参数时会依次让用户手动选择运行环境和 IMU 类型：`Hipnuc` 是旧 IMU，`IMU` 是新 IMU。需要自动构建时，第一个参数可传 `realrobot_mini`、`mujoco_sim_mini` 或 `test`，第二个参数可传 `Hipnuc` 或 `IMU`；也可以通过 `BUILD_ENVIRONMENT` 和 `PHYBOT_IMU_TYPE` 环境变量选择。编译结果会生成在 `build/` 目录。例如真机或 MuJoCo 环境编译后：
+执行以上命令后，根据提示选择 IMU：
+
+- `Hipnuc`：旧 IMU
+- `IMU`：新 IMU
+
+也可以在命令中直接指定 IMU，避免交互选择：
+
+```bash
+./autobuild.sh realrobot_mini Hipnuc
+./autobuild.sh realrobot_mini IMU
+./autobuild.sh mujoco_sim_mini Hipnuc
+./autobuild.sh test Hipnuc
+```
+
+切换真机、仿真或测试模式前，建议先清理原有编译结果，再重新编译。
+
+## 运行
+
+真机或 MuJoCo 仿真编译完成后：
 
 ```bash
 ./run.sh main
 ```
 
-查看可用程序：
+测试模式编译完成后，可运行：
+
+```bash
+./run.sh joy_test
+./run.sh imu_test
+./run.sh read_pos
+./run.sh set_zero
+./run.sh set_one_zero
+./run.sh set_one_Enable
+./run.sh head_test
+```
+
+查看当前 `build/` 目录中的可执行程序：
 
 ```bash
 ./run.sh
 ```
 
-`run.sh` 会自动设置本包的动态库路径，并从 `build/` 目录启动程序，保证现有配置中的相对路径能够正常工作。
+所有程序都应通过 `run.sh` 启动。该脚本会自动设置动态库路径，并从正确的工作目录运行程序。
 
-清理编译目录：
+## 清理编译产物
 
 ```bash
 ./autoclean.sh
 ```
 
-如果打包命令第六个参数指定了“只保留头文件功能包”，这些包会递归保留 `include/`、`config/`、`model/`、`data/`、`resources/`、`assets/`、`lib/` 和必要的父目录，其他内容会被移除。第五个参数指定的源码目录及其子目录优先完整保留。编译时会链接 `prebuilt/<IMU类型>/<环境>/` 下的预编译静态库，因此 `autobuild.sh` 仍可使用；这类头文件包本身不能在交付包内修改源码后重新编译。
+## 首次安装
 
-### 3.1 程序清单
-
-| 程序 | 用途 | 备注 |
-|---|---|---|
-| `main` | 真机或 MuJoCo 主程序 | 具体类型取决于 `autobuild.sh` 中的选择 |
-| `set_zero` | 指定电机归零 | 先检查 `MotorList/config/set_one_zero.yaml` |
-| `set_one_zero` | 单个电机归零 | 仅在明确电机 ID 后使用 |
-| `set_one_Enable` | 单个电机使能测试 | 用于排查电机在线和使能问题 |
-| `read_pos` | 读取电机位置 | 不执行运动控制 |
-| `joy_test` | 手柄输入测试 | 用于确认手柄映射和输入值 |
-| `head_test` | 头部关节测试 | 仅在确认机械安全后运行 |
-| `imu_test` | IMU 通信测试 | 用于检查串口和 IMU 数据 |
-
-### 3.2 推荐启动顺序
-
-真机首次启动建议按以下顺序进行：
-
-1. 检查机器人处于安全姿态，急停可用，电机周围没有障碍物；
-2. 检查 `device/config/device.yaml` 中的 IMU 串口和波特率；
-3. 检查 `MotorList/config/` 中的电机数量、CAN 配置和机器人型号；
-4. 如需单独归零，先运行测试程序确认通信，再执行归零程序；
-5. 确认手柄拨杆处于安全位置后，再启动 `main`。
-
-## 4. 配置文件
-
-常用配置位置如下：
-
-- 电机配置：`MotorList/config/`
-- IMU 配置：`device/config/device.yaml`
-- RL 参数：各 `RL_deploy_*/config/rl_params.yaml`
-- RL 模型：各 `RL_deploy_*/model/`
-- 归零配置：`ZeroState/config/ZERO.yaml`
-
-修改配置前请备份原文件。模型文件通常不能直接用文本编辑器修改。
-
-### 4.1 手柄配置
-
-本包构建时使用的手柄类型是 `Model_airplane`。手柄速度和按键映射位于：
-
-- 航模手柄：`Model_airplane_Joystick/config/joystick.yaml`
-- 普通手柄：`Joystick/config/joystick.yaml`
-
-如果需要切换手柄类型，必须重新编译交付包，不能只替换配置文件：
+首次使用时安装编译和图形依赖：
 
 ```bash
-./package_release.sh all Joystick PHYBOT_C2_SDK_1.2 ./deliveries
+./install_dependencies.sh
 ```
 
-### 4.2 RL 模型和参数
+安装依赖需要网络连接和管理员权限。该脚本仅适用于 Ubuntu 20.04 x86_64。
 
-每个 RL 包通常包含以下内容：
-
-```text
-RL_deploy_xxx/
-├── config/rl_params.yaml  # 观测、动作、频率等参数
-├── model/                 # TorchScript 或策略模型
-└── data/                  # 动作轨迹或辅助数据
-```
-
-修改 `rl_params.yaml` 前需要确认参数与模型训练时的网络结构一致。随意修改观测维度、动作维度、关节顺序或控制频率，可能导致模型加载失败或机器人动作异常。
-
-### 4.3 可扩展功能包
-
-新增 LED、蜂鸣器、传感器或其他通用功能时，建议使用以下目录约定：
-
-```text
-Feature_led/
-├── include/                # 头文件
-├── src/                    # C/C++ 源文件
-├── config/                 # 运行配置，可选
-├── resources/              # 固件、字库或其他运行资源，可选
-└── assets/                 # 图片、表格等运行资源，可选
-```
-
-交付脚本会递归复制源码和运行资源，并保持相对路径；任意层级的 `build/`、`build-*/`、`.git/`、`.vscode/` 和 `Publisher/` 会被排除。哪些源码参与编译仍由原工程 `CMakeLists.txt` 决定，新增或嵌套的功能包需要在原工程中正确注册。
-
-因此，新增一个 LED 功能包通常不需要修改 `package_release.sh`。只需：
-
-1. 创建 `Feature_led/include` 和 `Feature_led/src`；
-2. 在现有主程序或状态机中注册并调用 LED 类；
-3. 如有配置或资源，放入 `Feature_led/config` 或 `Feature_led/resources`；
-4. 在原工程 CMake 中添加所需源码和头文件搜索路径，再重新生成包，运行 `autobuild.sh` 后检查 `build/` 中的程序。
-
-如果 LED 使用独立动态库，可将运行时 `.so` 放在 `Feature_led/lib/`，脚本会递归收集任意层级 `lib/` 下的 `.so` 和 `.so.*` 到交付包的 `lib/`。
-
-### 4.4 MuJoCo 模型
-
-MuJoCo 主程序读取：
-
-```text
-RobotModel/phybot_c2/xml/phybot_c2.xml
-```
-
-该 XML 依赖同目录下的 STL 网格文件，因此 `RobotModel/phybot_c2/xml/` 和 `RobotModel/phybot_c2/new_meshes/` 必须保持原有相对目录结构，不能只复制 XML 文件。
-
-## 5. 日志、权限和运行目录
-
-程序必须通过 `run.sh` 启动，或者确保当前工作目录等同于包内的 `build/` 目录。直接从其他目录运行二进制可能导致 `../MotorList/config/...` 等相对路径找不到。
-
-日志和运行过程中生成的数据可能写入对应 RL 模块的 `logs/` 或 `data/` 目录。客户部署时建议给整个包目录保留写权限，或者将日志目录单独映射到可写磁盘。
-
-常用检查命令：
+如果脚本没有执行权限：
 
 ```bash
-pwd
-find ./build -maxdepth 1 -type f -executable -printf '%f\\n'
-df -h .
-ls -l /dev/tty* 2>/dev/null
+chmod +x install_dependencies.sh autobuild.sh autoclean.sh run.sh check_compatibility.sh
 ```
 
-## 6. 依赖和硬件要求
+## 软件内容
 
-- 默认目标系统：Ubuntu 20.04 x86_64；
-- 编译工具：GCC/G++ 9、CMake 3.16+、C++17；交付 SDK 需要先在目标机上编译；
-- `install_dependencies.sh` 安装 Ubuntu 20.04 编译、OpenGL 和 X11 依赖；
-- `check_compatibility.sh --abi-only` 检查库架构及 GLIBC/GLIBCXX/CXXABI 版本要求；
-- `build-info.txt` 记录封装目标和构建环境，`compatibility-report.txt` 记录 ABI 检查结果；
-- 动态库：已随包放入 `lib/`；
-- MuJoCo：使用包内的 MuJoCo 动态库和机器人模型；
-- 真机运行：需要正确连接电机、CAN 设备、IMU 和对应手柄；
-- 串口权限：当前用户需要有访问 IMU 串口设备的权限；
-- 本交付包不包含 Gazebo 和 ROS 运行环境。
+| 路径 | 作用 |
+|---|---|
+| `CMakeLists.txt` | CMake 工程入口。 |
+| `autobuild.sh` | 编译脚本，支持真机、MuJoCo 仿真和测试模式。 |
+| `run.sh` | 运行脚本，自动设置动态库路径并启动程序。 |
+| `autoclean.sh` | 清理 `build/` 中的编译产物。 |
+| `install_dependencies.sh` | 安装 Ubuntu 20.04 所需系统依赖。 |
+| `DataPackage/` | 公共数据接口和控制周期配置。 |
+| `device/` | IMU 等设备接口和配置。 |
+| `MotorList/` | 电机接口、通信参数和电机配置。 |
+| `Model_airplane_Joystick/` | 航模手柄接口和配置。 |
+| `StateMachine/` | 状态机定义和管理代码。 |
+| `ZeroState/` | 归零状态和参数。 |
+| `RL_deploy_cpg/` | 强化学习控制代码、模型和参数。 |
+| `RobotStart/` | 真机、仿真和测试程序入口。 |
+| `MujocoInterface/` | MuJoCo 仿真接口和配置。 |
+| `RobotModel/` | 机器人 URDF、MuJoCo XML 和网格资源。 |
+| `ThirdParty/` | 第三方头文件和运行依赖。 |
+| `lib/` | Torch、MuJoCo、yaml-cpp、MotorDrive 等运行时动态库。 |
 
-Ubuntu 20.04 混合 SDK 的预编译库必须在 Ubuntu 20.04 上使用 GCC 9 生成。在 Ubuntu 22.04/24.04 上封装时，可在原封装命令前添加 `PACKAGE_USE_DOCKER=1`，脚本会使用 Ubuntu 20.04 容器。仅更换编译器或 C++ 标准不能降低现有二进制的 glibc 依赖版本。
+请保留软件的完整目录结构，不要单独移动可执行程序、配置文件、模型文件或动态库。
 
-默认检查基线为 GLIBC 2.31、GLIBCXX 3.4.28、CXXABI 1.3.12。检测到超出基线的动态库会阻止发布，应替换为适配 Ubuntu 20.04 的库或在该系统重新编译。ABI 检查不代表所有系统依赖、CPU 指令集和硬件已完成验证。
+## 编译目标说明
 
-如果显式使用 `TARGET_PLATFORM=native`，包沿用宿主机工具链，不保证 Ubuntu 20.04 兼容性；依赖安装脚本仍仅用于 Ubuntu 20.04。
+| 命令 | 说明 |
+|---|---|
+| `./autobuild.sh realrobot_mini` | 编译 PHYBOT C2 真机程序，生成 `main`。 |
+| `./autobuild.sh mujoco_sim_mini` | 编译 MuJoCo 仿真程序，生成 `main`。 |
+| `./autobuild.sh test` | 编译归零、通信和硬件测试程序。 |
+| `./autobuild.sh <模式> Hipnuc` | 使用旧 IMU 编译指定模式。 |
+| `./autobuild.sh <模式> IMU` | 使用新 IMU 编译指定模式。 |
 
-## 7. 配置修改和备份建议
+`autobuild.sh` 当前不支持单独编译某一个测试程序。执行 `./autobuild.sh test <IMU类型>` 会编译全部已配置的测试程序。
 
-建议在修改前建立版本备份：
+## 状态机说明
+
+当前状态枚举位于 `StateMachine/include/fsmlist.h`：
+
+```cpp
+enum class State {
+    IDLE,
+    ZERO,
+    RL_walk,
+};
+```
+
+当前已注册的运行状态：
+
+- `State::ZERO`：机器人归零状态。
+- `State::RL_walk`：强化学习行走状态。
+
+状态注册位于 `StateMachine/include/statemachinemanager.h`。修改状态枚举、注册关系或切换逻辑后，必须重新编译并完成仿真和真机安全验证。
+
+## 测试程序说明
+
+| 程序 | 作用 |
+|---|---|
+| `joy_test` | 读取航模手柄数据，用于检查设备连接和输入。 |
+| `imu_test` | 读取 IMU 数据，用于检查 `/dev/ttyimu` 和波特率配置。 |
+| `read_pos` | 读取并显示电机位置。 |
+| `set_zero` | 按当前电机配置执行归零。 |
+| `set_one_zero` | 对 `set_one_zero.yaml` 中指定的电机置零。 |
+| `set_one_Enable` | 对 `set_one_Enable.yaml` 中指定的电机执行使能测试。 |
+| `head_test` | 头部或相关执行器测试。 |
+
+`RobotStart/test/pd_control.cpp`、`bms_test.cpp`、`led_test.cpp` 和 `led_off_test.cpp` 是参考测试源码，但当前 `autobuild.sh test` 不会生成对应的可执行程序。
+
+## YAML 配置说明
+
+| 配置文件 | 作用 |
+|---|---|
+| `DataPackage/config/datapackage.yaml` | 公共数据维度和控制周期。当前 `control_period` 为 0.002 秒，`actuatedDofNum` 为 21。 |
+| `Model_airplane_Joystick/config/joystick.yaml` | 手柄设备、速度范围和速度变化率。默认设备为 `/dev/ttyjoy`。 |
+| `MotorList/config/phybot_mini_1.yaml` | 第一块电机主板的网络参数和电机列表。 |
+| `MotorList/config/phybot_mini_2.yaml` | 第二块电机主板的网络参数和电机列表。 |
+| `MotorList/config/phybot_abszero.yaml` | 电机绝对零点偏置，数据长度应与电机数量一致。 |
+| `MotorList/config/set_one_Enable.yaml` | `set_one_Enable` 使用的电机 ID 列表。 |
+| `MotorList/config/set_one_zero.yaml` | `set_one_zero` 使用的电机 ID 列表。 |
+| `MotorList/config/failed_motors.yaml` | 保存电机使能失败信息，通常由程序写入。 |
+| `MotorList/config/phybot1.yaml`、`phybot2.yaml` | 其他机型或历史配置，当前 mini 主流程通常不使用。 |
+| `MujocoInterface/config/mujoco_sim.yaml` | MuJoCo 模型路径、关节名称、基座名称和传感器名称。 |
+| `RL_deploy_cpg/config/rl_params.yaml` | RL 模型路径、输入维度、PD 增益、动作缩放、力矩限制和默认关节位置。 |
+| `ZeroState/config/ZERO.yaml` | 归零位置、控制增益和归零时间。 |
+| `device/config/device.yaml` | IMU 串口配置，默认端口为 `/dev/ttyimu`，波特率为 921600。 |
+| `RobotModel/*/config/joint_names_*.yaml` | 机器人模型的关节名称映射。 |
+
+修改配置前建议先备份原文件：
 
 ```bash
-cp -a MotorList/config MotorList/config.backup.$(date +%Y%m%d_%H%M%S)
+cp -a MotorList/config MotorList/config.backup
 cp -a device/config/device.yaml device/config/device.yaml.backup
+cp -a Model_airplane_Joystick/config/joystick.yaml Model_airplane_Joystick/config/joystick.yaml.backup
 ```
 
-不建议直接修改以下内容：
+## 电机网络配置字段
 
-- RL 模型文件（`.pt`）；
-- MuJoCo XML 中的网格路径；
-- 电机 ID、方向和关节顺序；
-- 观测/动作维度以及控制频率。
+`phybot_mini_1.yaml` 和 `phybot_mini_2.yaml` 中常见字段如下：
 
-上述内容需要由熟悉机器人控制和模型训练的工程师修改并重新验证。
+| 字段 | 说明 |
+|---|---|
+| `Network.LocalIp` | 运行计算机的网卡 IP，需要与实际网卡一致。 |
+| `Network.LocalPort` | 运行计算机使用的 UDP 端口。 |
+| `Network.DestIp` | 电机主板 IP。 |
+| `Network.DestPort` | 电机主板 UDP 端口。 |
+| `CommunicationFre` | 通信频率。 |
+| `Motor.Id` | 电机 ID。 |
+| `Motor.Name` | 电机名称，用于确认程序索引和实际关节的对应关系。 |
+| `ControlMode` | 电机控制模式。 |
+| `FastMode` | 快速通信模式开关。 |
+| `PDKp`、`PDKd` | 电机 PD 参数。 |
+| `Direction` | 电机方向，会影响命令和反馈的符号。 |
 
-## 8. 新版本交付流程
+## 常见修改位置
 
-源码有更新或新增/删除 RL 包后，在源码工程根目录重新执行：
+| 目标 | 修改位置 |
+|---|---|
+| 修改真机归零姿态 | `ZeroState/config/ZERO.yaml` 中的 `zero_joint_position`。 |
+| 修改归零增益或时间 | `ZeroState/config/ZERO.yaml` 中的 `zero_p`、`zero_d` 和 `zero_totalTime`。 |
+| 修改手柄设备名 | `Model_airplane_Joystick/config/joystick.yaml` 中的 `dev`。 |
+| 修改手柄速度范围 | `Model_airplane_Joystick/config/joystick.yaml` 中的 `maxspeed_*` 和 `minspeed_*`。 |
+| 修改电机 IP 或端口 | `MotorList/config/phybot_mini_1.yaml`、`phybot_mini_2.yaml` 中的 `Network`。 |
+| 修改单电机置零列表 | `MotorList/config/set_one_zero.yaml` 中的 `set_zero_ID`。 |
+| 修改单电机使能列表 | `MotorList/config/set_one_Enable.yaml` 中的 `set_Enable_ID`。 |
+| 修改 RL 模型 | `RL_deploy_cpg/config/rl_params.yaml` 中的 `policy_path`。 |
+| 修改 IMU 串口 | `device/config/device.yaml` 中的 `port_name` 和 `baud_rate`。 |
+| 修改 MuJoCo 模型 | `MujocoInterface/config/mujoco_sim.yaml` 中的 `env_path`。 |
+
+修改电机 ID、方向、关节顺序、归零位置、PD 参数或 RL 网络维度可能导致机器人动作异常。修改后应先进行配置检查和仿真验证，再进行真机测试。
+
+## 电机顺序
+
+当前控制数据按 21 个关节排列：
+
+```text
+左腿（由髋部到脚踝）
+右腿（由髋部到脚踝）
+腰部
+左臂（由肩部到肘部）
+右臂（由肩部到肘部）
+```
+
+具体电机 ID 和名称以 `MotorList/config/phybot_mini_1.yaml`、`phybot_mini_2.yaml` 为准；模型关节顺序以 `MujocoInterface/config/mujoco_sim.yaml` 为准。
+
+## 设备权限
+
+默认设备：
+
+```text
+IMU：  /dev/ttyimu
+手柄： /dev/ttyjoy
+```
+
+检查设备：
 
 ```bash
-./package_release.sh all Model_airplane PHYBOT_C2_SDK_1.1 ./deliveries
+ls -l /dev/ttyimu /dev/ttyjoy
 ```
 
-脚本会自动：
-
-1. 在纯源码模式跳过编译；指定头文件包时，按所选环境分别构建旧 Hipnuc 和新 IMU 静态库；
-2. 递归复制源码工程、配置、模型和动态库，过滤旧构建目录；
-3. 按源码包优先的规则裁剪头文件包；
-4. 生成客户 SDK、编译/清理/运行脚本、版本文件和 README，不交付预编译可执行程序；
-5. 全部生成成功后替换同名旧交付包。
-
-交付包会保留可用的 `autobuild.sh` 和 `autoclean.sh`。`autobuild.sh` 使用包内 `CMakeLists.txt` 配置并编译到包内 `build/` 目录；`autoclean.sh` 只清理包内 `build/`。
-
-如果只需要某一个环境，可以指定环境名称：
+如果设备存在但当前用户没有访问权限，可将用户加入串口设备所属用户组。Ubuntu 通常使用 `dialout` 组：
 
 ```bash
-./package_release.sh mujoco_sim_mini Model_airplane PHYBOT_C2_SDK_1.1 ./deliveries
+sudo usermod -aG dialout "$USER"
 ```
 
-当前脚本默认交付完整可编译源码工程。如果第六个参数指定头文件包，会生成“源码包 + 头文件包 + 预编译库”的混合 SDK：
+执行后注销并重新登录。如果设备使用其他用户组，以 `ls -l` 显示的实际用户组为准。
 
-`Publisher/` 是独立的内部源码仓库，始终不会复制到客户交付包；依赖它的原工程 `autorun.sh` 也不会进入交付包。
+## 真机安全检查
 
-```bash
-./package_release.sh all Model_airplane PHYBOT_C2_SDK_1.1 ./deliveries device,RobotStart,ZeroState,RL_deploy_cpg,StateMachine LowPassFilter,Model_airplane_Joystick,MotorList,MujocoInterface,DataPackage
-```
+启动真机程序前：
 
-第五、六个参数均支持逗号分隔的多层相对目录，例如 `modules/sensors/imu,modules/control/filter`，路径相对于源码工程根目录。第五个参数中的包及其子目录保留完整源码；第六个参数中的包递归保留头文件和运行资源，编译时链接 `prebuilt/<IMU类型>/<环境>/` 下的静态库。未指定的包仍按原逻辑保留完整内容，`none` 表示空列表，不表示删除全部源码。
+1. 将机器人放置在稳定、可支撑的位置，并确认急停开关可用。
+2. 清空机器人运动范围，操作人员与机器人保持安全距离。
+3. 检查电源、电机、网线、IMU 和手柄连接。
+4. 确认编译时选择的 IMU 类型与实际硬件一致。
+5. 核对本机网卡地址、电机主板地址和电机配置。
+6. 先编译 `test` 模式，运行 `read_pos`、`imu_test` 和 `joy_test` 检查设备状态。
+7. 测试完成后重新编译 `realrobot_mini`，确认手柄开关处于安全位置，再运行 `main`。
 
-可选的第七个参数（或 `PROJECT_DIR` 环境变量）可以指定任意层级的源码工程根目录，原来的六参数命令仍可使用。混合 SDK 仍依赖原工程的 `phybot_common`、`phybot_joystick` 及对应环境静态库目标。
+机器人运动期间不要修改配置或插拔设备。出现异常动作、通信中断或持续报错时，应立即急停并切断动力电源。
 
-本封装脚本不包含 Gazebo 功能。Gazebo 相关源码和 ROS 依赖不会进入客户交付包。
+## 常见问题
 
-`RL_deploy_cpg_run` 仍是 CPG 的备用实现，默认不会参与编译，以避免和 `RL_deploy_cpg` 产生重复符号。第五个参数只控制交付包是否保留源码，不改变这个 CMake 编译规则。
+| 问题 | 处理方法 |
+|---|---|
+| 系统版本不支持 | 使用 `cat /etc/os-release` 和 `uname -m` 确认系统为 Ubuntu 20.04 x86_64。 |
+| 缺少编译工具或依赖 | 重新执行 `./install_dependencies.sh`。 |
+| 提示尚未编译 | 先执行相应的 `./autobuild.sh` 命令。 |
+| 找不到测试程序 | 执行 `./autoclean.sh`，然后运行 `./autobuild.sh test <IMU类型>`。 |
+| 找不到配置、模型或动态库 | 保持目录完整，并通过 `./run.sh <程序名>` 启动。 |
+| IMU 或手柄无法打开 | 检查设备名、线缆、配置和当前用户的设备访问权限。 |
+| 真机通信异常 | 检查急停、电源、网线、本机 IP、主板 IP、端口和电机配置。 |
 
-如果新 RL 包需要通过手柄或状态机触发，仍需在状态机的状态枚举、注册表和控制逻辑中完成业务注册。
+## 技术支持信息
 
-## 9. 客户二次开发步骤
+反馈问题时，请提供：
 
-### 9.1 新增机器人状态机
-
-1. 在软件包根目录新建状态功能目录，并建立 `include/`、`src/` 目录；需要模型、配置或动作数据时，再建立 `model/`、`config/`、`data/` 目录。
-2. 在 `include/` 中创建状态类头文件，在 `src/` 中创建实现文件。
-3. 状态类需要提供 `GetDataFromPackage`、`Step`、`SetDataToPackage` 和 `Exit` 接口，分别用于读取公共数据、执行状态逻辑、写回控制结果和退出状态。
-4. 编辑 `StateMachine/include/fsmlist.h`，在 `State` 枚举末尾追加新状态，不要调整已有状态的顺序。
-5. 编辑 `StateMachine/include/statemachinemanager.h`，引入新状态头文件，并在 `StateRegistry::registerAllStates()` 中注册新状态类和对应枚举。
-6. 编辑 `StateMachine/include/statemacine.h`，在 `toString()` 中增加新状态名称。
-7. 编辑根目录 `CMakeLists.txt`，把新状态源文件加入 `main` 目标，并把新状态的 `include/` 目录加入 `main` 的头文件搜索路径。
-8. 如果测试程序需要调用新状态，也要把相同的源文件和头文件路径加入对应测试目标。
-
-### 9.2 增加航模手柄按键映射
-
-1. 编辑 `Model_airplane_Joystick/include/joystick_int.h`，确认目标按键的 SBUS 通道号和 `xbox_map_t` 数据字段；使用新通道时，增加通道定义和数据字段。
-2. 编辑 `Model_airplane_Joystick/src/joystick_int.cpp`，在 `Serial_map_read()` 中读取目标通道，并设置按键松开、按下或多挡开关位置对应的字段值。
-3. 在 `Joystick::get_state_change()` 中增加按键到新 `State` 枚举的映射。
-4. 检查映射判断顺序。多个按键同时触发时，排在前面的条件优先执行，`ZERO` 等安全状态应放在普通动作状态之前。
-5. 一个按键只映射一个状态，避免同一按键同时修改多个 `NextState`。
-6. 执行 `./autoclean.sh`，再执行 `./autobuild.sh`，选择 `test` 环境和实际使用的 IMU。
-7. 编译完成后执行 `./run.sh joy_test`，逐个操作航模手柄按键，确认状态与映射一致。
-8. 手柄测试通过后，重新构建 `realrobot_mini` 或 `mujoco_sim_mini`，运行 `main` 验证完整的状态进入、运行和退出流程。
-
-## 10. 安全说明
-
-纯源码模式会交付完整源码；混合模式仅裁剪指定头文件包，其他源码仍保留。预编译静态库仍可能被逆向分析，交付前请确认源码保留列表符合交付范围。
-
-## 11. 故障排查
-
-检查动态库依赖：
-
-```bash
-LD_LIBRARY_PATH=./lib ldd ./build/main
-```
-
-常见问题：
-
-### 程序提示动态库 `not found`
-
-确认使用 `run.sh` 启动，并检查：
-
-```bash
-LD_LIBRARY_PATH=./lib ldd ./build/main | grep 'not found'
-```
-
-如果仍有缺失，通常是交付包不完整，或者 `build/`、`lib/` 被单独移动。
-
-### 程序提示配置或模型文件不存在
-
-确认当前目录是包根目录，并通过 `run.sh` 启动。检查目标文件：
-
-```bash
-test -f MotorList/config/phybot_mini_1.yaml && echo OK
-test -f RobotModel/phybot_c2/xml/phybot_c2.xml && echo OK
-test -d RobotModel/phybot_c2/new_meshes && echo OK
-```
-
-### 真机电机无法使能
-
-依次检查电源、CAN 接线、设备权限、MotorList 配置、电机 ID 和急停状态。不要在未确认电机状态时重复执行使能或运动程序。
-
-### IMU 数据为 `nan` 或无数据
-
-检查 `device/config/device.yaml` 的串口名、波特率和设备权限，确认没有其他程序占用该串口，再运行 `test_imu_test`。
-
-### MuJoCo 找不到网格
-
-确认 `RobotModel/phybot_c2/xml/phybot_c2.xml` 和 `RobotModel/phybot_c2/new_meshes/` 均存在，并且没有改变目录层级。
-
-## 12. 交付边界
-
-本包用于客户运行、现场配置和重新编译。新增 RL 包、修改状态机、修改电机控制逻辑或更换模型后，应重新执行 `autobuild.sh` 并进行实机或仿真验证。
-
-如需问题定位，请同时提供软件包版本文件、启动命令、终端完整日志、修改过的配置文件名以及硬件连接状态。
+- `PHYBOT_C2_UBUNTU20_1.0.version` 中的软件版本；
+- 操作系统版本和 CPU 架构；
+- 编译模式和 IMU 类型；
+- 执行的完整命令；
+- 终端中的完整错误信息；
+- 问题出现前修改过的配置。
